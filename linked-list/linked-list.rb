@@ -24,5 +24,5 @@ my_list.insert(6)
 puts "What's in my list?"
 print_list(my_list)
 
-puts "NODE COUNT = " + count_node(my_list)
-puts "SMALLEST ELEMENT = " + find_min(my_list)
+puts "NODE COUNT = #{count_node(my_list)}"
+puts "SMALLEST ELEMENT = #{find_min(my_list)}"

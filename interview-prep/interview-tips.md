@@ -62,4 +62,4 @@ end
 
 Each ListItem has a ```value``` method which returns the value stored in the list item, and a ```next``` method that returns the next ListItem if it exists and ```nil``` if that item does not exist.
 
-`Try to come up with *two* solutions to this problem. You do not need to code/test your solution for realz, just sketch out the psuedocode and run through a test case or two. Explain why 1 solution is better than the other. If you cannot come up with two solutions on your own: compare with a peer and discuss pros/cons of each solution.`
+```Try to come up with *two* solutions to this problem. You do not need to code/test your solution for realz, just sketch out the psuedocode and run through a test case or two. Explain why 1 solution is better than the other. If you cannot come up with two solutions on your own: compare with a peer and discuss pros/cons of each solution.```

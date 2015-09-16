@@ -2,7 +2,7 @@
 
 Technical interviews can be stressful, but like most anything else, they are a learned, practiced skill. DON'T PANIC! Technical interviews are not necessarily about evaluating the validity of your solution, but often are more about evaluating a candidate's technical communication skills and problem solving approach.
 
-Read [Coding Interview Tips: How to get better at technical interviews without practicing](https://www.interviewcake.com/article/coding-interview-tips).
+Read [Coding Interview Tips: How to get better at technical interviews without practicing](https://www.interviewcake.com/article/coding-interview-tips) and [Big O Notation: Using not-boring math to measure code's efficiency](https://www.interviewcake.com/article/big-o-notation-time-and-space-complexity)
 
 If you approach problems systematically, and communicate clearly, you'll be most of the way there.
 

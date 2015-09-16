@@ -2,6 +2,8 @@
 
 Technical interviews can be stressful, but like most anything else, they are a learned, practiced skill. DON'T PANIC! Technical interviews are not necessarily about evaluating the validity of your solution, but often are more about evaluating a candidate's technical communication skills and problem solving approach.
 
+Read [Coding Interview Tips: How to get better at technical interviews without practicing](https://www.interviewcake.com/article/coding-interview-tips).
+
 If you approach problems systematically, and communicate clearly, you'll be most of the way there.
 
 ## Problem Solving approach
@@ -46,6 +48,6 @@ end
 
 Each ListItem has a ```value``` method which returns the value stored in the list item, and a ```next``` method that returns the next ListItem if it exists and ```nil``` if that item does not exist.
 
-The solution that we discussed in class was removing the last element from the list repeatedly, and adding the element to a new list. Step through the problem and this (or an alternate solution) using the problem solving framework outlined above.
+Try to come up with _two_ solutions to this problem. Explain why 1 solution is better than the other.
 
 Is there a better solution?

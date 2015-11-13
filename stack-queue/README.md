@@ -16,7 +16,7 @@ To understand _a_ solution for implementing stacks and queues in Ruby. Note that
 ## What to do
 Comment the code to explain what's happening.
 
-# Job Simulation Assignment
+# Part 3 - Job Simulation Assignment
 
 ## Goal
 To _utilize_ stacks and queues in solving a programming problem.

@@ -6,7 +6,7 @@ See if you can treat Ruby Arrays like native arrays (don't use Ruby Array method
 ## What to do
 In the black box for Stack, implement the [class Stack](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/33-advanced-arrays/lessons/86-stacks-and-queues) with a partner.
 
-# Part 2 - Commenting RubyMonk's Stack.rb and Queue.rb
+# Part 2 - Commenting RubyMonk's Code
 
 ## Goal
 To understand _a_ solution for implementing stacks and queues in Ruby. Note that there are lots of ways to implement data structures, so if you would have done a little/lot different, that's OK.

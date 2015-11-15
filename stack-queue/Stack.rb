@@ -6,13 +6,13 @@ class Stack
     @size = size
     # an instance variable that is a new array, the length of which is set to equal the size instance variable
     @store = Array.new(@size)
-    # an instance variable set to the value of -1
+    # an instance variable set to the value of -1, meant to represent the end of the @store array
     @top = -1
   end
 
   # a method called pop that removes the last element in the @store array
   def pop
-    # calls the empty? method and if the method is true, returns nil and doesn't remove an element from the array, otherwise it moves onto else
+    # calls the empty? private method and if the method is true, returns nil and doesn't remove an element from the array, otherwise it moves onto else
     if empty?
       nil
     else
@@ -22,22 +22,22 @@ class Stack
       @store[@top] = nil
       # resets @top by subtracting one from whatever the value is of @top
       @top = @top.pred #@top--
-      # returns the value of the element that was removed from the array
+      # returns the value of the element that was removed from the end of the array
       popped
     end
   end
 
   # a method called push that adds an element to the front of the @store array, passed in as a parameter
   def push(element)
-    # if the full? method returns true or element is nil, nil gets returned and nothing gets pushed to @store array, otherwise it moves onto else
+    # if the full? private method returns true or element equals nil, nil gets returned and nothing gets pushed to @store array, otherwise it moves onto else
     if full? or element.nil?
       nil
     else
-      # adds one to whatever the value is of @top
+      # resets @top by adding one to whatever the value is of @top
       @top = @top.succ
-      # the value that is at @top index in the @store array is set to element
+      # the value that is at @top index in the @store array is set to whatever is passed in at element
       @store[@top] = element
-      # returns the updated Stack instance
+      # returns the updated Stack instance, with element being added to the front of the array
       self
     end
   end
@@ -55,12 +55,12 @@ class Stack
   # methods below here can only be called without an explicit receiver (i.e., they cannot be called on an instance of Stack)
   private
 
-  # returns true if @top and @size minus 1 are equal
+  # returns true if @top and @size minus 1 are equal; indicates the array is full and nothing can be added to it
   def full?
     @top == (@size - 1)
   end
 
-  # returns true if @top equals -1
+  # returns true if @top equals -1; indicates the array is empty and nothing can be removed from it
   def empty?
     @top == -1
   end

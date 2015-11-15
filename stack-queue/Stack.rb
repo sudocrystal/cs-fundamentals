@@ -1,5 +1,5 @@
 class Stack
-
+  attr_reader :store
   # Initializes a new array with the passed size
   # Also sets an instance variable for @top to track the top of the stack
   def initialize(size)
@@ -46,14 +46,14 @@ class Stack
     @store[@top]
   end
 
-  private
+  #private
 
   # If the stack is full, @top is equal to the size - 1
   def full?
     @top == (@size - 1)
   end
 
-  # if the stack is empty, @top will be equal to -1 
+  # if the stack is empty, @top will be equal to -1
   def empty?
     @top == -1
   end

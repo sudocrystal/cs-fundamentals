@@ -1,4 +1,5 @@
 class Queue
+  attr_reader :store
   # Initializes an array of the passed size
   def initialize(size)
     @size = size
@@ -42,7 +43,7 @@ class Queue
     @size
   end
 
-  private
+  #private
 
   # If the head is at -1 and the tail is at 0 we know the queue is empty
   def empty?

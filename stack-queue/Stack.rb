@@ -1,6 +1,6 @@
 require 'pry'
 class Stack
-  # a method to initialize a new instance of Stack
+  # a method to initialize a new instance of Stack with @size, @store, and @top attributes
   def initialize(size)
     # an instance variable that gets set to the value of the passed in size parameter
     @size = size

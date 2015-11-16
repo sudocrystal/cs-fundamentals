@@ -13,11 +13,11 @@ class Queue
     if empty?
       nil
     else
-      # increments tail, which ... ?
+      # increments tail, which is like removing an element
       @tail = @tail.succ
       # temp variable storing the value that is being dequeued
       dequeued = @store[@head]
-      # prepends nil to the front of the queue
+      # prepends nil to the front of the queue, which is like moving everything forward one in the queue
       @store.unshift(nil)
       # pops the last value from the queue in order to maintain the size
       @store.pop

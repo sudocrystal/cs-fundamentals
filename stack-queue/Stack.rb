@@ -36,14 +36,26 @@ class Stack
   # end pop method
   end
 
+  # method that adds a new item from the variable element to the Stack
   def push(element)
+    # beginnig of if statement
+    # if the method full? returns true or the value of the local var element is nil
     if full? or element.nil?
+      # return nil
       nil
+    # if the method full? returns false or the value of the local var element is not nil
     else
+      # take the value of the variable @top and add one to it
+      # assign this new value back to the var @top
       @top = @top.succ
+      # assign the value of the local var element
+      # to the position in the array @store at the value of @top
       @store[@top] = element
+      # return self
       self
+    # end if/else statement
     end
+  # end push method  
   end
 
   def size

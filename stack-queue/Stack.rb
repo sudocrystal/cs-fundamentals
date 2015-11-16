@@ -14,9 +14,9 @@ class Stack
     if empty? # If the stack is empty, return nil
       nil
     else
-      # Store last element in stack as a local variable
+      # Store last non-nil element (@top index) in stack as a local variable
       popped = @store[@top]
-      # Set last element in stack to nil
+      # Set last non-nil element (@top index) in stack to nil
       @store[@top] = nil
       # Subtract 1 from @top
       @top = @top.pred
@@ -31,7 +31,7 @@ class Stack
       nil
     else
       @top = @top.succ # Add 1 to @top
-      # Replace @top_th nil in array to element
+      # Change @top (nil) in array to element
       @store[@top] = element
       # Return stack instance
       self

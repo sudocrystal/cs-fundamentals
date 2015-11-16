@@ -60,7 +60,7 @@ class Stack
 
   # method that returns the size of the Stack
   def size
-    # return the value of the instace variable @size
+    # return the value of the instance variable @size
     @size
   # end size method
   end
@@ -69,16 +69,28 @@ class Stack
   def look
     # return the value of the element in array @store in the positon of the value of @top
     @store[@top]
-  # end look method  
+  # end look method
   end
 
+  #begining of methods that are only avaliable to other methods in the Stack class
   private
 
+  # method that returns true if Stack is full of data, and false if it has open spots
   def full?
+    # return true if the value of the instance var @top
+    # is equal to the value of the difference between instance var @size and int 1
+    # otherwise return false
     @top == (@size - 1)
+  # end full? method
   end
 
+  # method that returns true if Stack contains no data and false if it does
   def empty?
+    # returns true if the value of the instance var @top is equal to the int -1
+    # returns false if the value of the instance var @top is not equal to the int -1
     @top == -1
+  # end of empty? method
   end
+
+# end of Stack class
 end

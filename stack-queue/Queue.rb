@@ -5,10 +5,10 @@ class Queue
   def initialize(size)
     # sets the data storage amount to the instance var @size so that it can be accessed by every method in this instance of Queue
     @size = size
-    # creates a new array instace with an array size equal to the Queue data storage amount
+    # creates a new array instance with an array size equal to the Queue data storage amount
     # sets the new array instance to the instance var @store
     @store = Array.new(@size)
-    # sets instace vars @head and @tail to the ints -1 and 0 respectivy, to indicate that for Queue class instances are first in first out data structures
+    # sets instance vars @head and @tail to the ints -1 and 0 respectivy, to indicate that for Queue class instances are first in first out data structures
     @head, @tail = -1, 0
   # end the initialize method
   end
@@ -74,11 +74,21 @@ class Queue
 
   # method that returns true if Queue contains no data and false if it does
   def empty?
+    # return true if the value of the instance var @head is equal to -1
+    # and the value of the instance var @tail is equal to 0
+    # otherwise return false
     @head == -1 and @tail == 0
+  # end of empty? method
   end
 
   # method that returns true if Queue is full of data, and false if it has open spots
   def full?
+    # return true if the value of the abolute value of the instance var @tail
+    # is equal to the value of the instance var @size
+    # otherwise return false
     @tail.abs == (@size)
+  # end the full? method
   end
+
+# end the Queue class  
 end

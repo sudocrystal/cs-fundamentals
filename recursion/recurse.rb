@@ -1,10 +1,12 @@
 def fact(n)
+	
 end
 
 def fib(n)
 end
 
 def pal(s)
+
 end
 
 # Factorial Tests

@@ -55,15 +55,21 @@ class Stack
       self
     # end if/else statement
     end
-  # end push method  
+  # end push method
   end
 
+  # method that returns the size of the Stack
   def size
+    # return the value of the instace variable @size
     @size
+  # end size method
   end
 
+  # method that returns the value of the most recently added element to the Stack
   def look
+    # return the value of the element in array @store in the positon of the value of @top
     @store[@top]
+  # end look method  
   end
 
   private

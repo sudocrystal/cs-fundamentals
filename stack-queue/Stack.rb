@@ -14,6 +14,7 @@ class Stack
     @store = Array.new(@size)
     # the top variable tracks the last element, I'm renaming it to "@top_index" because that's clearer to me what it's doing
     @top_index = -1
+    binding.pry
   end
   
   # A method that 'pop's' something off the array
@@ -31,10 +32,12 @@ class Stack
       # Take away one from the top
       # Read the docs for .pred because I'd never seen it
       # It returns the Integer equal to the Int minus 1
+      # So now the top index is at -2 instead of -1
       @top_index = @top_index.pred #@top_index--
       # Return local variable popped
       popped
     end
+    binding.pry
   end
 
 
@@ -52,6 +55,7 @@ class Stack
       # Returns the stack instance 
       self
     end
+    binding.pry
   end
   
   # Method that returns the size instance from above so that it won't be different as it's changed in other methods

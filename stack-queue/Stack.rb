@@ -12,15 +12,28 @@ class Stack
   # end the initialize method
   end
 
+  # method that removes and returns the most recent item added to the Stack
   def pop
+    # begining of if statement
+    # if the method empty? returns true
     if empty?
+      #return nil
       nil
+    # if the method empty? returns false
     else
+      # assign to the the local var popped the value in the array @store
+      # that is is the array position of the value of @top
       popped = @store[@top]
+      # assign the value nil to the positon of the value of @top in the array @store
       @store[@top] = nil
-      @top = @top.pred #@top--
+      # subtract one from the value of the instance var @top
+      # and assign the value back to the instance var @top
+      @top = @top.pred
+      # return the value of the local var popped
       popped
+    # end if/else statement
     end
+  # end pop method
   end
 
   def push(element)

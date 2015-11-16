@@ -59,14 +59,17 @@ class Queue
       self
     # end the if/else statement
     end
-  # end the enqueue method  
+  # end the enqueue method
   end
 
   # method that returns the size of the Queue
   def size
+    # returns the value of the instance var @size
     @size
+  # end of size method
   end
 
+  #begining of methods that are only avaliable to other methods in the Queue class
   private
 
   # method that returns true if Queue contains no data and false if it does

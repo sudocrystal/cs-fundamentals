@@ -1,3 +1,8 @@
+#
+# PART II: Commenting RubyMonk's Code
+# Logan McDonald, Cohort 4
+#
+
 class Queue
   def initialize(size)
     @size = size

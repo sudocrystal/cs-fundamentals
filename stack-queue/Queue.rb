@@ -1,6 +1,6 @@
 # Class Queue contains methods that can be used by Queue instances
 class Queue
-  
+
   # instantiates a new instance of the Queue class with a data storage amount of var size
   def initialize(size)
     # sets the data storage amount to the instance var @size so that it can be accessed by every method in this instance of Queue
@@ -40,15 +40,26 @@ class Queue
   # end the dequeue method
   end
 
-  # method that adds a new item to the Queue
+  # method that adds a new item from the variable element to the Queue
   def enqueue(element)
+    # beginnig of if statement
+    # if the method full? returns true or the value of the local var element is nil
     if full? or element.nil?
+      # return nil
       nil
+    # if the method full? returns false or the value of the local var element is not nil
     else
+      # subtract one from the value of the instance var @tail
+      # and assign the value back to the instance var @tail
       @tail = @tail.pred
+      # assign the value of the local var element
+      # to the position in the array @store at the value of @tail
       @store[@tail] = element
+      # return the value self
       self
+    # end the if/else statement
     end
+  # end the enqueue method  
   end
 
   # method that returns the size of the Queue

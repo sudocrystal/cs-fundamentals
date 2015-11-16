@@ -1,24 +1,11 @@
 require 'pry'
 
-# personal notes:
-# from Ruby doc:
-# .pred returns the Integer equal to int -1
-# -1.pred => =-2
-
-# .succ returns the Integer equal to +1
-# 1.succ => 2
-
-
-# .unshift: prepends objects to the front of self, moving other elements upwards.
-# a = ["b", "c", "d", "e"]
-#a.unshift("a")=> ["a", "b", "c", "d"]
-
 class Queue
   # initialize a new Queue object with a certain size/# of slots
   def initialize(size)
     # will store the size of the Queue object at any instance
     @size = size
-    # store will store the size of the new Queue object you have made in an Array
+    # store will store the size of the new Queue object you have made in an array
     @store = Array.new(@size)
     # head is the first to come out of the queue when called, tail will be last
     @head, @tail = -1, 0
@@ -53,7 +40,7 @@ class Queue
       @tail = @tail.pred
       # ??
       @store[@tail] = element
-      # will return the Queue object with the new element added when called
+      # will return the Queue object with the new element added
       self
     end
   end
@@ -75,3 +62,16 @@ class Queue
     @tail.abs == (@size)
   end
 end
+
+# personal notes:
+# from Ruby doc:
+# .pred returns the Integer equal to int -1
+# -1.pred => =-2
+
+# .succ returns the Integer equal to +1
+# 1.succ => 2
+
+
+# .unshift: prepends objects to the front of self, moving other elements upwards.
+# a = ["b", "c", "d", "e"]
+#a.unshift("a")=> ["a", "b", "c", "d"]

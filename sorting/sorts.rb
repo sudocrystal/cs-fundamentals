@@ -41,7 +41,6 @@ end
 def selection_sort(arr)
 	# Find the smallest unsorted item and places it next in the sorted items
 	index = 0
-
 	while index != arr.length
 		check = index
 		min = nil

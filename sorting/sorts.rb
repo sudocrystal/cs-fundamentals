@@ -46,3 +46,4 @@ raise "Selection Sort doesn't sort!" unless selection_numbers == sorted_numbers
 puts "\n\n"
 
 
+puts "YAY!! I wrote Insertion sort and Selection sort in Ruby!! Aren't I awesome?"

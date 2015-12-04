@@ -1,8 +1,19 @@
 def fact(n)
-	
+  if n == 0 
+    1
+  else
+    n * fact(n - 1)
+  end
 end
 
 def fib(n)
+  if n 
+  array = [0]
+  until array.length == n + 1
+    num = array[-1] + array[-2]
+    array << num
+  end
+  array[-1]
 end
 
 def pal(s)

@@ -1,4 +1,4 @@
-
+require 'pry'
 # create a randomly sized array (1-10 elements) with random values (0-999)
 def create_array
 	array = []
@@ -9,13 +9,32 @@ def create_array
 	return array
 end
 
-# TODO: write insertion sort 
+# TODO: write insertion sort
 def insertion_sort(arr)
-	return arr
+	arr.each_with_index do |num, i|
+    if i > 0
+      while arr[i] < arr[i-1] && i > 0
+        arr[i], arr[i-1] = arr[i-1], arr[i]
+        i -= 1
+      end
+  	end
+  end
+  return arr
 end
 
 # TODO: write selection sort
 def selection_sort(arr)
+	to_sort = arr.dup
+	sorted = []
+	until sorted.length == arr.length
+		min = to_sort[0]
+		to_sort.length.times do |i|
+			min = to_sort[i] if to_sort[i] < min
+		end
+		sorted.push(min)
+		to_sort.delete_at(to_sort.index(min))
+	end
+	arr = sorted
 	return arr
 end
 

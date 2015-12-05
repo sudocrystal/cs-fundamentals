@@ -9,14 +9,24 @@ def create_array
 	return array
 end
 
-# TODO: write insertion sort 
+# TODO: insertion sort grabs the next item that is unsorted, and moves it through the srted items until it finds something smaller than it, leaves it in that spot. 
 def insertion_sort(arr)
-	return arr
+  sorted_arr = []
+  while arr != sorted_array do
+    next = arr[0].pop
+    x = -1
+    sorted_array.length.times do
+      
+    end
+    sorted_arr.
+  end
+
+  return sorted_arr
 end
 
-# TODO: write selection sort
+# TODO: selection sort goes through each item in the array and checks if it is the next smallest number that has not been sorted yet, then it adds the next smallest nunber to the top of the sorted stack, and continues. 
 def selection_sort(arr)
-	return arr
+  return arr
 end
 
 begin

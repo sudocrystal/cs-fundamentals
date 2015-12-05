@@ -1,4 +1,3 @@
-require 'pry'
 # create a randomly sized array (1-10 elements) with random values (0-999)
 def create_array
 	array = []

@@ -10,8 +10,8 @@ def create_array
 end
 
 # TODO: write insertion sort
+# Checks the next unsorted item against the sorted items and puts it in the correct place in the array of sorted items
 def insertion_sort(arr)
-  # Checks the next unsorted item against the sorted items and puts it in the correct place in the sorted items
   index = 1
   while index != arr.length
     check = index - 1
@@ -36,6 +36,8 @@ def insertion_sort(arr)
 end
 
 # TODO: write selection sort
+#Starting with the first element in the array, scan the rest of the array for the minimum element, then place it
+#at the beginning of the array, in sorted order.
 def selection_sort(arr)
 	index = 0
 	while index != arr.length

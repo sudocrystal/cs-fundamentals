@@ -32,6 +32,20 @@ end
 # iterates through all non-sorted items, saves the smallest one that it finds
 # at end, moves the smallest element found to the end of the array at the left
 def selection_sort(arr)
+	i = 0
+	while i < arr.length do
+		smallest = arr[i]
+		n = i + 1
+		while n < arr.length do
+			if arr[n] < smallest
+				smallest = arr[n]
+			end
+			n += 1
+		end
+		arr.delete(smallest)
+		arr.insert(i, smallest)
+		i += 1
+	end
 	return arr
 end
 

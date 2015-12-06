@@ -76,32 +76,42 @@ def insertion_sort(array)
 	return @array
 end
 
-def set_instances_selection
-	@index = 0
-	@current_i = 1
-end
 
 # TODO: write selection sort
 def selection_sort(arr)
-#	smaller = 0
-#	@array = arr
-#	set_instances_selection
-#	while !finish?
-#		(@index..@array.length).times do
-#
-#		 (!smaller_selection?)
-#			step_forward_selection
+	smaller = 0
+	@array = arr
+	@index = 0
 
-
-
-	# compare the number with the smallest
-	# if it's smaller change the index
-	#step forward
-	#put it where the index
-	# stap index forward
-	# find the smaller ...
-	return arr
+	while !finish_selection?
+		smaller = @index
+		for i in (@index..(@array.length-1))
+			if @array[i] < @array[smaller]
+				smaller = i
+			end
+		end
+		swap_selection(smaller, @index)
+		step_forward_selection #index and current
+	end
+	return @array
 end
+
+def finish_selection?
+	if @index == @array.length-1
+		return true
+	end
+end
+
+def swap_selection(smaller, index)
+	temp = @array[smaller]
+	@array[smaller] = @array[index]
+	@array[index] = temp
+end
+
+def step_forward_selection
+	@index += 1
+end
+
 
 begin
 	numbers = create_array()

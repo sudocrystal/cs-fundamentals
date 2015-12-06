@@ -13,13 +13,14 @@ end
 def insertion_sort(arr)
   # compares each element to the elements on their left
   # swaps with the element on the left if the element on the left is higher than the element being sorted
+	# this will not work if the array has the same value twice, canNOT figure out how to make that work ugh
 	i = 1
 	while i < arr.length do
 		check = i - 1
 		num = arr[i]
 		while check >= 0 && num < arr[check] do
 			check -= 1
-			arr.delete(num)
+			arr.delete_at(arr.index(num))
 			arr.insert(check + 1, num)
 		end
 		i += 1
@@ -31,6 +32,7 @@ end
 # TODO: write selection sort
 # iterates through all non-sorted items, saves the smallest one that it finds
 # at end, moves the smallest element found to the end of the array at the left
+# this will not work if the array has the same value twice, canNOT figure out how to make that work ugh ugh
 def selection_sort(arr)
 	i = 0
 	while i < arr.length do
@@ -42,7 +44,7 @@ def selection_sort(arr)
 			end
 			n += 1
 		end
-		arr.delete(smallest)
+		arr.delete_at(arr.index(smallest))
 		arr.insert(i, smallest)
 		i += 1
 	end

@@ -1,7 +1,7 @@
 
 # create a randomly sized @array (1-10 elements) with random values (0-999)
 
-
+require 'pry'
 
 	def create_array
 		array = []
@@ -20,7 +20,7 @@
 	def swap
 		temp = @array[@current_i + 1]
 		@array[@current_i + 1] = @array[@current_i]
-		@array[@current_i + 1] = temp
+		@array[@current_i] = temp
 	end
 
 	def smaller?
@@ -63,6 +63,7 @@
 		@index += 1
 	end
 
+
 # TODO: write insertion sort
 def insertion_sort(array)
 	set_instances
@@ -75,12 +76,27 @@ def insertion_sort(array)
 	return @array
 end
 
+def set_instances_selection
+	@index = 0
+	@current_i = 1
+end
+
 # TODO: write selection sort
 def selection_sort(arr)
-	@array = arr
+#	smaller = 0
+#	@array = arr
+#	set_instances_selection
+#	while !finish?
+#		(@index..@array.length).times do
+#
+#		 (!smaller_selection?)
+#			step_forward_selection
 
 
-	# find the smaller number in the array
+
+	# compare the number with the smallest
+	# if it's smaller change the index
+	#step forward
 	#put it where the index
 	# stap index forward
 	# find the smaller ...

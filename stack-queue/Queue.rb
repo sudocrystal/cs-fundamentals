@@ -1,44 +1,94 @@
+# Class Queue contains methods that can be used by Queue instances
 class Queue
+
+  # instantiates a new instance of the Queue class with a data storage amount of var size
   def initialize(size)
+    # sets the data storage amount to the instance var @size so that it can be accessed by every method in this instance of Queue
     @size = size
+    # creates a new array instance with an array size equal to the Queue data storage amount
+    # sets the new array instance to the instance var @store
     @store = Array.new(@size)
+    # sets instance vars @head and @tail to the ints -1 and 0 respectivy, to indicate that for Queue class instances are first in first out data structures
     @head, @tail = -1, 0
+  # end the initialize method
   end
-  
+
+  # method that removes and returns the first item in the Queue
   def dequeue
+    # begining of if statement
+    # if the method empty? returns true
     if empty?
+      #return nil
       nil
+    # if the method empty? returns false
     else
+      # take the value of the variable @tail and add one to it
+      # assign this new value back to the var @tail
       @tail = @tail.succ
-
+      # assign the the local var dequeued the value in the array @store
+      # that is is the array position of the value of @head
       dequeued = @store[@head]
+      # adds nil to the front of the @store array
+      # and moves the other elements up the array
       @store.unshift(nil)
+      # removes the last element from the @store array
       @store.pop
+      # returns the value assigned to the local var dequeued
       dequeued
+    # end the if/else statement
     end
-  end
-  
-  def enqueue(element)
-    if full? or element.nil?
-      nil
-    else
-      @tail = @tail.pred
-      @store[@tail] = element
-      self 
-    end
-  end
-  
-  def size
-    @size
-  end
-  
-  private
-  
-  def empty?
-    @head == -1 and @tail == 0
+  # end the dequeue method
   end
 
-  def full?
-    @tail.abs == (@size)
+  # method that adds a new item from the variable element to the Queue
+  def enqueue(element)
+    # beginnig of if statement
+    # if the method full? returns true or the value of the local var element is nil
+    if full? or element.nil?
+      # return nil
+      nil
+    # if the method full? returns false or the value of the local var element is not nil
+    else
+      # subtract one from the value of the instance var @tail
+      # and assign the value back to the instance var @tail
+      @tail = @tail.pred
+      # assign the value of the local var element
+      # to the position in the array @store at the value of @tail
+      @store[@tail] = element
+      # return the value self
+      self
+    # end the if/else statement
+    end
+  # end the enqueue method
   end
+
+  # method that returns the size of the Queue
+  def size
+    # returns the value of the instance var @size
+    @size
+  # end of size method
+  end
+
+  #begining of methods that are only avaliable to other methods in the Queue class
+  private
+
+  # method that returns true if Queue contains no data and false if it does
+  def empty?
+    # return true if the value of the instance var @head is equal to -1
+    # and the value of the instance var @tail is equal to 0
+    # otherwise return false
+    @head == -1 and @tail == 0
+  # end of empty? method
+  end
+
+  # method that returns true if Queue is full of data, and false if it has open spots
+  def full?
+    # return true if the value of the abolute value of the instance var @tail
+    # is equal to the value of the instance var @size
+    # otherwise return false
+    @tail.abs == (@size)
+  # end the full? method
+  end
+
+# end the Queue class  
 end

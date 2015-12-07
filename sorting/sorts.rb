@@ -1,6 +1,3 @@
-require 'pry'
-
-
 # create a randomly sized array (1-10 elements) with random values (0-999)
 def create_array
 	array = []
@@ -11,8 +8,6 @@ def create_array
 	return array
 end
 
-# TODO: write insertion sort
-# https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html
 # start with the second value in the array
 # compare it with the value to its left
 # if the value on the left is larger, swap
@@ -20,6 +15,13 @@ end
 # compare it with the value to its left, keep comparing and try to swap
 # stop moving to the left when you find a pair that is in order
 def insertion_sort(arr)
+	(arr.length - 1).times do |n|
+		current_place = n + 1
+		while arr[current_place - 1] > arr[current_place] && current_place > 0 do
+			swap(arr, current_place - 1, current_place)
+			current_place -= 1
+		end
+	end
 	return arr
 end
 
@@ -28,7 +30,7 @@ end
 def find_smallest_to_the_right(arr, index)
 	min_val = arr[index]
 	min_index = index
-	(arr.length - index).times  do |n|
+	(arr.length - index).times do |n|
 		real_index = n + index
 		if arr[real_index] < min_val
 			min_val = arr[real_index]
@@ -39,13 +41,12 @@ def find_smallest_to_the_right(arr, index)
 end
 
 def swap(arr, i, j)
+	# Can also create a temp variable and use it to store the value while swapping
+	# but this way is a lot easier.
 	arr[i], arr[j] = arr[j], arr[i]
 	return arr
 end
 
-# go through the entire array and find the smallest value
-# swap the smallest value with the first place (or whatever place you are on)
-# continue this throughout the array
 def selection_sort(arr)
 	arr.length.times do |current_place|
 		# Find the index of the smallest value to the right of the current place

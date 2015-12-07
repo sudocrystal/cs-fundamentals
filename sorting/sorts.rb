@@ -25,6 +25,16 @@ end
 
 # TODO: selection sort goes through each item in the array and checks if it is the next smallest number that has not been sorted yet, then it adds the next smallest nunber to the top of the sorted stack, and continues. 
 def selection_sort(arr)
+  sorted = []
+  (0..arr.length-1).each do |i|
+    min = i
+    n = i
+    while n <= arr.length - 1 do
+      min = n if arr[n] < arr[i]
+      n += 1
+    end
+    arr[i], arr[min] = arr[min], arr[i]
+  end
   return arr
 end
 

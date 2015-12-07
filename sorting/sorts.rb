@@ -1,4 +1,6 @@
 
+require 'pry'
+
 # create a randomly sized array (1-10 elements) with random values (0-999)
 def create_array
 	array = []
@@ -11,17 +13,14 @@ end
 
 # TODO: insertion sort grabs the next item that is unsorted, and moves it through the srted items until it finds something smaller than it, leaves it in that spot. 
 def insertion_sort(arr)
-  sorted_arr = []
-  while arr != sorted_array do
-    next = arr[0].pop
-    x = -1
-    sorted_array.length.times do
-      
-    end
-    sorted_arr.
-  end
+  (0..arr.length-1).each do |i|
+      insert_num = arr.delete_at(i)
 
-  return sorted_arr
+      insert_index = i
+      insert_index -= 1 while insert_index > 0 && insert_num < arr[insert_index - 1]
+      arr.insert(insert_index, insert_num)
+  end
+  arr
 end
 
 # TODO: selection sort goes through each item in the array and checks if it is the next smallest number that has not been sorted yet, then it adds the next smallest nunber to the top of the sorted stack, and continues. 
@@ -45,13 +44,13 @@ puts "\n\n"
 
 puts "after INSERTION SORT, array = "
 insertion_numbers = insertion_sort(numbers.dup)
-print insertion_numbers
+puts insertion_numbers
 raise "Insertion Sort doesn't sort!" unless insertion_numbers == sorted_numbers
 puts "\n\n"
 
 puts "after SELECTION SORT, array = "
 selection_numbers = selection_sort(numbers.dup)
-print selection_numbers
+puts selection_numbers
 raise "Selection Sort doesn't sort!" unless selection_numbers == sorted_numbers
 puts "\n\n"
 

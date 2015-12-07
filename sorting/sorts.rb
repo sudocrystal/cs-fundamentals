@@ -18,10 +18,12 @@ def insertion_sort(arr)
 	while i < arr.length do
 		check = i - 1
 		num = arr[i]
+		original_index = i
 		while check >= 0 && num < arr[check] do
 			check -= 1
-			arr.delete_at(arr.index(num))
+			arr.delete_at(original_index)
 			arr.insert(check + 1, num)
+			original_index -= 1
 		end
 		i += 1
 	end

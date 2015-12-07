@@ -1,4 +1,4 @@
-
+require 'pry'
 # create a randomly sized array (1-10 elements) with random values (0-999)
 def create_array
 	array = []
@@ -9,15 +9,50 @@ def create_array
 	return array
 end
 
-# TODO: write insertion sort 
+
 def insertion_sort(arr)
-	return arr
+	# Insertion sort takes the next element to be sorted, and sorts it into the sorted array section, shifting over larger numbers if needed, and continues one at a time for each next element until the last one is sorted.
+	final = [arr[0]]
+	arr.delete_at(0)
+	# main code
+	for i in arr
+			final_index = 0
+			while final_index < final.length
+					if i <= final[final_index]
+							final.insert(final_index,i)
+							break
+					elsif final_index == final.length-1
+							final.insert(final_index+1,i)
+							break
+					end
+				final_index += 1
+		end
+end
+# output
+	return final
 end
 
-# TODO: write selection sort
+
 def selection_sort(arr)
-	return arr
+	# Selection sort goes through the entire array to find the smallest number and then moves this to the beginning of the array. It repeats this process, moving the next smallest number after the previoues smaller number until no more are left. Thus it goes through the array 1 less times then the amount of elements in the array.
+	final = []
+	total_length = arr.length
+	while final.length < total_length
+		smallest = arr[0]
+		sml_position = 0
+		arr.each.with_index do |x, index|
+			if x < smallest
+				smallest = x
+				sml_position = index
+			end
+		end
+		final.push(smallest)
+		arr.delete_at(sml_position)
+	end
+	return final
 end
+
+
 
 begin
 	numbers = create_array()

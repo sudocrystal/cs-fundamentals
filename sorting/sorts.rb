@@ -18,12 +18,12 @@ def insertion_sort(arr)
 	while i < arr.length do
 		check = i - 1
 		num = arr[i]
-		original_index = i
+		original_item = i
 		while check >= 0 && num < arr[check] do
 			check -= 1
-			arr.delete_at(original_index)
+			arr.delete_at(original_item)
 			arr.insert(check + 1, num)
-			original_index -= 1
+			original_item -= 1
 		end
 		i += 1
 	end
@@ -38,16 +38,18 @@ end
 def selection_sort(arr)
 	i = 0
 	while i < arr.length do
-		smallest = arr[i]
+		smallest_value = arr[i]
+		smallest_index = i
 		n = i + 1
 		while n < arr.length do
-			if arr[n] < smallest
-				smallest = arr[n]
+			if arr[n] <= smallest_value
+				smallest_value = arr[n]
+				smallest_index = n
 			end
 			n += 1
 		end
-		arr.delete_at(arr.index(smallest))
-		arr.insert(i, smallest)
+		arr.delete_at(smallest_index)
+		arr.insert(i, smallest_value)
 		i += 1
 	end
 	return arr

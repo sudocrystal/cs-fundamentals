@@ -1,4 +1,4 @@
-
+require 'pry'
 # create a randomly sized array (1-10 elements) with random values (0-999)
 def create_array
 	array = []
@@ -9,13 +9,50 @@ def create_array
 	return array
 end
 
-# TODO: write insertion sort 
+# TODO: write insertion sort
+# Checks the next unsorted item against the sorted items and puts it in the correct place in the array of sorted items
 def insertion_sort(arr)
+  index = 1
+  while index != arr.length
+    check = index - 1
+    while true
+      if arr[index] > arr[check]
+        number = arr[index]
+        arr.delete(arr[index])
+        arr.insert(check + 1, number)
+        break
+      elsif check == 0
+        number = arr[index]
+        arr.delete(arr[index])
+        arr.insert(check, number)
+        break
+      else
+        check -= 1
+      end
+    end
+      index += 1
+  end
 	return arr
 end
 
 # TODO: write selection sort
+#Starting with the first element in the array, scan the rest of the array for the minimum element, then place it
+#at the beginning of the array, in sorted order.
 def selection_sort(arr)
+	index = 0
+	while index != arr.length
+		check = index
+		min = nil
+		while check != arr.length
+			if min.nil? || arr[check] < min
+				min = arr[check]
+			end
+			check += 1
+		end
+		arr.delete(min)
+		arr.insert(index, min)
+		index += 1
+	end
 	return arr
 end
 

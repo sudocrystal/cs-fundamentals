@@ -11,11 +11,35 @@ end
 
 # TODO: write insertion sort 
 def insertion_sort(arr)
+	number_compare = 0
+  for i in (0..array.length - 1)
+    j = i
+    done = false
+    while ((j > 0) && (! done))
+      number_compare = number_compare + 1
+      if (array[j] < array[j - 1])
+        temporary = array[j - 1]
+        array[j - 1] = array[j]
+        array[j] = temporary
+      else
+        done = true
+      end
+      j = j - 1
+    end
+  end
 	return arr
 end
 
 # TODO: write selection sort
 def selection_sort(arr)
+	for i in (0..arr.length - 2)
+		minimum_index = i
+		for j in (i + 1..arr.length - 1)
+			if arr[j] < arr[minimum_index]
+				minimum_index = j
+				arr[i], arr[minimum_index] = arr[minimum_index], arr[i]
+			end
+		end
 	return arr
 end
 

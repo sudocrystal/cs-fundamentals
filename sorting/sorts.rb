@@ -9,13 +9,33 @@ def create_array
 	return array
 end
 
-# TODO: write insertion sort 
+# TODO: write insertion sort
 def insertion_sort(arr)
+	# Insertion sort takes the next thing and sorts it
+	final = [arr[0]]
+	arr.delete_at(0)
+	# main code
+	for i in arr
+			final_index = 0
+			while final_index < final.length
+					if i <= final[final_index]
+							final.insert(final_index,i)
+							break
+					elsif final_index == final.length-1
+							final.insert(final_index+1,i)
+							break
+					end
+				final_index+=1
+		end
+end
+# output
+final
 	return arr
 end
 
 # TODO: write selection sort
 def selection_sort(arr)
+	# How does selection sort work?
 	return arr
 end
 

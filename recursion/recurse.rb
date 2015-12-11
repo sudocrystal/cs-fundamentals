@@ -1,10 +1,33 @@
 def fact(n)
+  # Base case
+  if n == 1 || n == 0
+    return 1
+  end
+  # Recursive case
+  return n * fact(n-1)
 end
 
 def fib(n)
+  # Base case
+  if n == 1 || n == 2
+    return 1
+  end
+  # Recursive case
+  return fib(n-1) + fib(n-2)
 end
 
 def pal(s)
+  # use length of the word to test the base case
+  if s == "" 
+    return true
+  end
+  if s[0] == s[-1]
+    s.slice!(0)
+    s.slice!(-1)
+    return pal(s)
+  else
+    return false
+  end
 end
 
 # Factorial Tests

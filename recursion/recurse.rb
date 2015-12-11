@@ -1,10 +1,16 @@
 def fact(n)
+  if n==1 || n==0
+    return 1
+  end
+  return n * fact(n-1)
 end
 
 def fib(n)
+
 end
 
 def pal(s)
+
 end
 
 # Factorial Tests

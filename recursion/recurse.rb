@@ -1,10 +1,26 @@
 def fact(n)
+  return 1 if n <= 1
+
+  n * fact(n-1)
 end
 
+# 1 1 2 3 5 8 13...
+# what is the nth Fibonacci number
 def fib(n)
+  return 1 if n <= 2
+
+  fib(n - 1) + fib(n - 2)
 end
 
 def pal(s)
+  return true if s.length <= 1
+
+  # s = s.upcase
+  if s[0] == s[-1]
+    pal(s.slice(1..-2))
+  else
+    return false
+  end
 end
 
 # Factorial Tests

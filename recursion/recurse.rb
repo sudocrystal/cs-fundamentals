@@ -1,10 +1,28 @@
 def fact(n)
+  if n == 1 || n == 0
+    return 1
+  end
+    return n * fact(n-1)
 end
 
 def fib(n)
+  if n == 1 || n == 2
+    return 1
+  end
+  return fib(n-1) + fib(n-2)
 end
 
-def pal(s)
+#use the length of the word to create the base case
+#in the recursive you should be throwing out two letters
+def pal?(s)
+  if (s.length == 1) || (s.length == 0)
+    return true
+  end
+  if s.slice!(0) != s.slice!(-1)
+     return false
+  else
+    return pal(s)
+  end
 end
 
 # Factorial Tests

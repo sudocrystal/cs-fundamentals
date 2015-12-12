@@ -17,13 +17,14 @@ def pal(s)
   end
 end
 
-#fib(8) determines what the 8th number in the fib sequence is
 def fib(n)
-  return 21
-#   # fib(1) = 0
-#   # fib(2) = 1
-#   # fib(3) = 1
-#   # 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+  if n == 1
+    return 1
+  elsif n == 2
+    return 1
+  else
+    return fib(n-2) + fib(n-1)
+  end
 end
 
 

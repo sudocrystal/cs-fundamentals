@@ -1,10 +1,29 @@
 def fact(n)
+  if n == 1 || n == 0
+    return 1
+  end
+  return n * fact(n-1)
 end
 
 def fib(n)
+  if n == 1 || n == 2
+    return 1
+  end
+  return fib(n-1) + fib(n-2)
 end
 
 def pal(s)
+  # use length of word in order to create base case
+  s_array = s.split("")
+  if s.length == 1 || s.length == 0
+    return true
+  end
+  if s_array[0] == s_array[-1]
+    s = pal(s_array.slice!(1..-2).join(""))
+    return s
+  else
+    return false
+  end
 end
 
 # Factorial Tests

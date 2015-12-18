@@ -63,5 +63,5 @@ a = [6,23,53,1,2,5,62,61,33,21,14,6,23]
 original = a.shuffle
 puts "ORIGINAL \n" + original.to_s
 mergesorted = mergesort(a)
-puts "AFTER MERGESORT \n" + a.to_s
+puts "AFTER MERGESORT \n" + mergesorted.to_s
 puts "You did it!" if original.sort == mergesorted

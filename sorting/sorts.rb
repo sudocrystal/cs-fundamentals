@@ -14,6 +14,7 @@ end
 # move on to the next place of the array
 # compare it with the value to its left, keep comparing and try to swap
 # stop moving to the left when you find a pair that is in order
+# or when you get back to the beginning
 def insertion_sort(arr)
 	(arr.length - 1).times do |n|
 		current_place = n + 1
@@ -26,7 +27,8 @@ def insertion_sort(arr)
 end
 
 # This method returns the index of the smallest value to the right of the given index
-# Can also use ruby's min method but I'm assuming we're not allowed to use built-in methods
+# Can also use ruby's min method with arrays of different ranges
+# but I'm assuming we're not allowed to use Ruby's built-in methods
 def find_smallest_to_the_right(arr, index)
 	min_val = arr[index]
 	min_index = index

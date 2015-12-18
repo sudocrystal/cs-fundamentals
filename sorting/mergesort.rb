@@ -1,36 +1,65 @@
+require 'pry'
+
 def mergesort(a)
 	# if the array size is 0|1 then the list is considered sorted, return sorted array
+	return a if a.length == 0 || a.length == 1
 	# split the list in half
+	left, right = split_array(a)
 	# merge sort each half
+	left = mergesort(left)
+	right = mergesort(right)
 	# combine the sorted halves
+	combine(left, right)
 end
 
 def split_array(a)
-	# find the middle
-  	# take = Returns first n elements from the array.
-	# drop = Drops first n elements and returns the rest of the elements.
-	# return left and right halves of array as separate arrays
-	# [a[0..mid] , a[mid+1..-1]]
-	# return a.take(mid), a.drop(mid)
+	mid = a.length / 2
+	return a.take(mid), a.drop(mid)
 end
 
 # precondition: a and b are sorted
 def combine(a, b)
-	# create a results array
-	
-	# counters pointing to the index of the smallest elements in each array
-
-	# check that we have elements to compare
-		# push the smaller element onto the result array
-
-	# if there are elements left over in a, move them to result
-	# if there are elements left over in b, move them to result
-
+	sorted = []
+	while a.length != 0 && b.length != 0
+		a[0] < b[0] ? (sorted << a.shift) : (sorted << b.shift)
+	end
+  a.length == 0 ? (sorted += b) : (sorted += a)
+	return sorted
 end
 
+puts "Testing combine"
+a = [2, 3, 4, 5, 12, 20]
+b = [2, 3, 9]
+puts "The arrays are #{a} and #{b}"
+puts "The two arrays combined are #{combine(a, b)}"
+a = [1]
+b = [0, 4, 5, 6, 7, 8, 9]
+puts "The arrays are #{a} and #{b}"
+puts "The two arrays combined are #{combine(a, b)}"
+
+# a = [2, 3, 4, 5, 12, 20]
+# b = [2, 3, 9]
+# c = [1, 3]
+# puts "Testing split"
+# l, r = split_array(a)
+# puts "Original array is #{a}"
+# puts "Left side is #{l}"
+# puts "Right side is #{r}"
+#
+# l, r = split_array(b)
+# puts "Original array is #{b}"
+# puts "Left side is #{l}"
+# puts "Right side is #{r}"
+#
+# l, r = split_array(c)
+# puts "Original array is #{c}"
+# puts "Left side is #{l}"
+# puts "Right side is #{r}"
+
+
 # TEST IT
-a = [6,23,53,1,2,5,62,61,33,21,14,6,23]
-a = a.shuffle
-puts "ORIGINAL \n" + a.to_s
-a = mergesort(a)
-puts "AFTER MERGESORT \n" + a.to_s
+d = [6,23,53,1,2,5,62,61,33,21,14,6,23]
+d = d.shuffle
+puts "ORIGINAL \n" + d.to_s
+d = mergesort(d)
+puts "AFTER MERGESORT \n" + d.to_s

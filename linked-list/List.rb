@@ -28,8 +28,26 @@ class List
     end
   end
 
+  def find_node_at_index(index)
+    i = 0
+    temp = @head
+    while i != index
+      temp = temp.next
+      i += 1
+    end
+    return temp
+  end
+
   def add_at_index(index, data)
-    # TODO Challenge: add data at a specific index
+    if index == 0
+      new_node = Node.new(data, @head)
+      @head = new_node
+    else
+      prev_node = find_node_at_index(index - 1)
+      return puts "Error adding #{data} at index #{index}: Index is too large" if prev_node.nil?
+      new_node = Node.new(data, prev_node.next)
+      prev_node.next = new_node
+    end
   end
 
   def delete_at_index(index)
@@ -38,7 +56,6 @@ class List
   end
 
   def contains?(data)
-    # TODO Challenge: returns if the list contains data
     temp = @head
     until temp.nil? do
       return true if data == temp.data

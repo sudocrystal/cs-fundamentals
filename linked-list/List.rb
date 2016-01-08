@@ -13,9 +13,25 @@ class List
     # if the list is empty, add the first node
 	  if @head == nil
 	    @head = Node.new(data,nil)
-	  end
+	  else
+    # THIS EXAMPLE ONLY - Adss to the front of the list
+    #b, a
+    # make b node
+    # new_node = Node.new(data, nil)
+    # #make b point at head
+    # new_node.next = @head
+    # #reassign head
+    # @head = new_node
+
     # if the list isn't empty, add after the last node
     # TODO: this case
+
+      temp = @head
+  	  while temp.next != nil
+        temp = temp.next
+  	  end
+  	  temp.next = Node.new(data,nil)
+    end
   end
 
   def add_at_index(index, data)

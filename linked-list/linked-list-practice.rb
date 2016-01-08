@@ -21,7 +21,11 @@ def find_min(list)
 end
 
 def reverse(list)
-  return "reverse not yet implemented"
+  return list if list.empty? || list.head.next.nil?
+  temp = list.head
+  next_node = temp.next
+  next_node
+
 end
 
 # create a new linked list

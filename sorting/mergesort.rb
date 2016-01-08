@@ -14,6 +14,7 @@ def mergesort(a)
 	return combine(left, right)
 end
 
+<<<<<<< HEAD
 # def split_array(a)
 	# find the middle
   	# take = Returns first n elements from the array.
@@ -22,10 +23,18 @@ end
 	# [a[0..mid] , a[mid+1..-1]]
 	# return a.take(mid), a.drop(mid)
 # end
+=======
+def split_array(a)
+	# find the middle index
+	# split the array in half - take a look at take and drop in the ruby docs, or use ranges 
+	# return left and right halves of array as separate arrays - did you know a method can return multiple arrays? look it up
+end
+>>>>>>> dab67fda06d0a272bd575d9f294d4c234c05b701
 
 # precondition: a and b are sorted
 def combine(left, right) ## will not call combine within combine
 	# create a results array
+<<<<<<< HEAD
 	results = []
 	# check that we have elements to compare
 	# until there is nothing left in the right or left arrays:
@@ -41,6 +50,13 @@ def combine(left, right) ## will not call combine within combine
 	results += left if !left.nil?
 	results += right if !right.nil?
 	return results
+=======
+	# counters pointing to the index of the smallest elements in each array
+	# check that we have elements to compare
+		# push the smaller element onto the result array
+	# if there are elements left over in a, move them to result
+	# if there are elements left over in b, move them to result
+>>>>>>> dab67fda06d0a272bd575d9f294d4c234c05b701
 end
 
 # TEST IT

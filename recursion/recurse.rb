@@ -1,5 +1,5 @@
 def fact(n)
-  # base case: 
+  # base case:
   if n == 0 || n == 1
     return 1
   end
@@ -8,22 +8,37 @@ end
 
 def fib(n)
   # base cases:
-  if n == 0
-    return 0
-  elsif n == 1
+  if n == 1 || n == 2
     return 1
   end
   return fib(n - 1) + fib(n - 2)
 end
 
+#why doesn't the following work instead of || n == 2 and line 12?
+# return 1
+# elsif n == 2
+# return 2
+
+# def pal(s)
+#   s_array = s.split("")
+#   #base case:
+#   if s.length == 1 || s.length == 0
+#     return true
+#   end
+#   if s_array[0] == s_array[-1]
+#     s = pal(s_array.slice(1..-2).join("")) #weird syntax because of slice method
+#   else
+#     return false
+#   end
+# end
+
 def pal(s)
-  s_array = s.split("")
   #base case:
   if s.length == 1 || s.length == 0
     return true
   end
-  if s_array[0] == s_array[-1]
-    s = pal(s_array.slice(1..-2).join("")) #weird syntax because of slice method
+  if s[0] == s[-1]
+    pal(s[1..-2]) #weird syntax because of slice method
   else
     return false
   end

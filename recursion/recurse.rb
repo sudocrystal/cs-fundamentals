@@ -34,6 +34,7 @@ puts "passes all fibanocci tests"
 # Palindrome Tests
 raise "pal broke - pal('racecar')" unless pal("racecar") == true
 raise "pal broke - pal('helloworlh')" unless pal("helloworl") == false
+raise "pal broke - pal('abcddcba')" unless pal("abcddcba") == true
 raise "pal broke - pal('helloworld')" unless pal("helloworld") == false
 raise "pal broke - pal('')" unless pal("") == true
 puts "passes all palindrome tests"

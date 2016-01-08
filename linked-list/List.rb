@@ -22,7 +22,7 @@ class List
     # TODO Challenge: add data at a specific index
   end
 
-  def delete(index)
+  def delete_at_index(index)
     # TODO Challenge: remove data from a specific index
   end
 

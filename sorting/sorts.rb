@@ -4,6 +4,7 @@ def create_array
   rand_size = rand(10) + 1
   (0..rand_size).each do
     array.push( rand(1000) )
+    array.push(rand(1000))
   end
   return array
 end
@@ -23,11 +24,14 @@ def insertion_sort(arr)
     arr[number+1] = num_key
   end 
 
+# TODO: write insertion sort
+def insertion_sort(arr)
   return arr
 end
 
 # TODO: write selection sort
 def selection_sort(arr)
+<<<<<<< HEAD
   # Finds the small element and puts it at the beginning
   new_arr = []
 
@@ -58,14 +62,18 @@ puts "\n\n"
 puts "after INSERTION SORT, array = "
 insertion_numbers = insertion_sort(numbers.dup)
 print insertion_numbers
-raise "Insertion Sort doesn't sort!" unless insertion_numbers == sorted_numbers
+
 puts "\n\n"
+raise "Insertion Sort doesn't sort!" unless insertion_numbers == sorted_numbers
 
 puts "after SELECTION SORT, array = "
 selection_numbers = selection_sort(numbers.dup)
 print selection_numbers
+
 raise "Selection Sort doesn't sort!" unless selection_numbers == sorted_numbers
 puts "\n\n"
 
 
 puts "YAY!! I wrote Insertion sort and Selection sort in Ruby!! Aren't I awesome?"
+puts "\n\n"
+raise "Selection Sort doesn't sort!" unless selection_numbers == sorted_numbers

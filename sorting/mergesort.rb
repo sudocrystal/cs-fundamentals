@@ -28,6 +28,9 @@ def split_array(a)
 
 	# [a[0..mid] , a[mid+1..-1]]
 	return left, right
+	# find the middle index
+	# split the array in half - take a look at take and drop in the ruby docs, or use ranges 
+	# return left and right halves of array as separate arrays - did you know a method can return multiple arrays? look it up
 end
 
 # precondition: a and b are sorted
@@ -64,6 +67,12 @@ def combine(a, b)
 	# if there are elements left over in b, move them to result
   
   return results
+	# create a results array
+	# counters pointing to the index of the smallest elements in each array
+	# check that we have elements to compare
+		# push the smaller element onto the result array
+	# if there are elements left over in a, move them to result
+	# if there are elements left over in b, move them to result
 end
 
 # TEST IT

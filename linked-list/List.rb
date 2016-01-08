@@ -9,13 +9,22 @@ class List
 	  @head.nil?
   end
 
+  def find_tail
+    temp = @head
+    while !temp.next.nil?
+      temp = temp.next
+    end
+    return temp
+  end
+
   def add(data)
     # if the list is empty, add the first node
-	  if @head == nil
-	    @head = Node.new(data,nil)
-	  end
-    # if the list isn't empty, add after the last node
-    # TODO: this case
+    if @head.nil?
+      @head = Node.new(data,nil)
+    else
+      last_node = find_tail
+      last_node.next = Node.new(data, nil)
+    end
   end
 
   def add_at_index(index, data)
@@ -24,6 +33,7 @@ class List
 
   def delete_at_index(index)
     # TODO Challenge: remove data from a specific index
+    # temp.next = temp.next.next
   end
 
   def contains?(data)
@@ -36,7 +46,7 @@ class List
     # Otherwise, traverse through list to print contents
 	  s = "List contents: "
 	  temp = @head       # creates a temp pointer so we don't lose head of list
-	  while temp != nil  # while the current node isn't nil
+	  while !temp.nil?  # while the current node isn't nil
 	    s += temp.to_s   # add the current node's data to print
       temp = temp.next # move to the next node
 	  end

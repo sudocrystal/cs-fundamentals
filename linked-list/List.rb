@@ -13,9 +13,16 @@ class List
     # if the list is empty, add the first node
 	  if @head == nil
 	    @head = Node.new(data,nil)
-	  end
-    # if the list isn't empty, add after the last node
-    # TODO: this case
+	  else
+      # if the list isn't empty, add after the last node
+      temp = @head
+      while temp.next != nil
+        temp = temp.next
+      end
+      temp.next = Node.new(data,nil)
+    end
+    # THIS EXAMPLE ONLY - IF ADDING TO FRONT - i.e. [c][b][a]
+    # @head = Node.new(data,@head)
   end
 
   def add_at_index(index, data)
@@ -27,7 +34,7 @@ class List
   end
 
   def contains?(data)
-    # TODO Challenge: returns if the list contains data
+    # TODO: returns if the list contains data
   end
 
   def to_s

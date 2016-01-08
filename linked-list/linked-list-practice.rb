@@ -8,6 +8,10 @@ def find_min(list)
   return "find_min not yet implemented"
 end
 
+def reverse(list)
+  return "reverse not yet implemented"
+end
+
 # create a new linked list
 my_list = List.new
 
@@ -22,3 +26,4 @@ puts my_list
 
 puts "NODE COUNT = #{count_node(my_list)}"
 puts "SMALLEST ELEMENT = #{find_min(my_list)}"
+puts "REVERSED LIST = #{reverse(my_list)}"

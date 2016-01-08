@@ -18,7 +18,7 @@ class List
     # TODO: this case
   end
 
-  def add(index, data)
+  def add_at_index(index, data)
     # TODO Challenge: add data at a specific index
   end
 

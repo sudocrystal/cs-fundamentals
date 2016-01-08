@@ -19,7 +19,7 @@ def pal(s)
     return false
   else
     # recursive case
-    true and pal(s[1..-2])
+    pal(s[1..-2])
   end
 end
 

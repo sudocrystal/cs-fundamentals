@@ -27,35 +27,15 @@ def combine(a, b)
 	return sorted
 end
 
-puts "Testing combine"
-a = [2, 3, 4, 5, 12, 20]
-b = [2, 3, 9]
-puts "The arrays are #{a} and #{b}"
-puts "The two arrays combined are #{combine(a, b)}"
-a = [1]
-b = [0, 4, 5, 6, 7, 8, 9]
-puts "The arrays are #{a} and #{b}"
-puts "The two arrays combined are #{combine(a, b)}"
-
+# puts "Testing combine"
 # a = [2, 3, 4, 5, 12, 20]
 # b = [2, 3, 9]
-# c = [1, 3]
-# puts "Testing split"
-# l, r = split_array(a)
-# puts "Original array is #{a}"
-# puts "Left side is #{l}"
-# puts "Right side is #{r}"
-#
-# l, r = split_array(b)
-# puts "Original array is #{b}"
-# puts "Left side is #{l}"
-# puts "Right side is #{r}"
-#
-# l, r = split_array(c)
-# puts "Original array is #{c}"
-# puts "Left side is #{l}"
-# puts "Right side is #{r}"
-
+# puts "The arrays are #{a} and #{b}"
+# puts "The two arrays combined are #{combine(a, b)}"
+# a = [1]
+# b = [0, 4, 5, 6, 7, 8, 9]
+# puts "The arrays are #{a} and #{b}"
+# puts "The two arrays combined are #{combine(a, b)}"
 
 # TEST IT
 d = [6,23,53,1,2,5,62,61,33,21,14,6,23]

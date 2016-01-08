@@ -1,32 +1,60 @@
 def mergesort(a)
 	# if the array size is 0|1 then the list is considered sorted, return sorted array
+	if a.length == 0 || a.length == 1
+		return a
+	end
+
 	# split the list in half
+	one, two = split_array(a)
+
 	# merge sort each half
+	one = mergesort(one)
+	two = mergesort(two)
+
 	# combine the sorted halves
+	return combine(one, two)
 end
 
+
 def split_array(a)
-	# find the middle
-  	# take = Returns first n elements from the array.
-	# drop = Drops first n elements and returns the rest of the elements.
-	# return left and right halves of array as separate arrays
-	# [a[0..mid] , a[mid+1..-1]]
-	# return a.take(mid), a.drop(mid)
+	if a.length % 2 == 0
+		mid_index = a.length / 2 - 1
+	else
+		mid_index = (a.length - 2) / 2
+	end
+	return a[0..mid_index], a[(mid_index + 1)..(a.length - 1)]
 end
 
 # precondition: a and b are sorted
-def combine(a, b)
-	# create a results array
-	
-	# counters pointing to the index of the smallest elements in each array
+def combine(one, two)
+  results = []
+  while !one.empty? && !two.empty?
+    min1 = one[0]
+    min2 = two[0]
+    if min1 <= min2
+      results.push(min1)
+      one.shift
+    else
+      results.push(min2)
+      two.shift
+    end
+  end
 
-	# check that we have elements to compare
-		# push the smaller element onto the result array
+  while !one.empty?
+    min1 = one[0]
+    results.push(min1)
+    one.shift
+  end
 
-	# if there are elements left over in a, move them to result
-	# if there are elements left over in b, move them to result
+  while !two.empty?
+    min2 = two[0]
+    results.push(min2)
+    two.shift
+  end
 
+  return results
 end
+
 
 # TEST IT
 a = [6,23,53,1,2,5,62,61,33,21,14,6,23]

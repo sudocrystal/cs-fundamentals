@@ -1,6 +1,7 @@
 require './Node.rb'
 
 class List
+  attr_reader :head
   def initialize
 	  @head = nil
   end
@@ -38,6 +39,12 @@ class List
 
   def contains?(data)
     # TODO Challenge: returns if the list contains data
+    temp = @head
+    until temp.nil? do
+      return true if data == temp.data
+      temp = temp.next
+    end
+    return false
   end
 
   def to_s

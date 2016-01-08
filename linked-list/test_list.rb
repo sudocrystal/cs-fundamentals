@@ -18,3 +18,6 @@ puts "Does it contain f? #{x.contains?("f")}"
 
 x.add_at_index(5, "f")
 puts x.to_s
+
+x.delete_at_index(6)
+puts x.to_s

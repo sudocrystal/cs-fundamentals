@@ -1,4 +1,5 @@
 require './Node.rb'
+require 'pry'
 
 class List
   attr_reader :head
@@ -51,8 +52,13 @@ class List
   end
 
   def delete_at_index(index)
-    # TODO Challenge: remove data from a specific index
-    # temp.next = temp.next.next
+    if index == 0
+      @head = @head.next
+    else
+      prev_node = find_node_at_index(index - 1)
+      return puts "Error deleting node at index #{index}: Index is too large" if prev_node.next.nil?
+      prev_node.next = prev_node.next.next
+    end
   end
 
   def contains?(data)

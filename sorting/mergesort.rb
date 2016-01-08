@@ -29,7 +29,7 @@ def combine(a, b)
 	# counters pointing to the index of the smallest elements in each array
 	l, r = 0, 0
 	# check that we have elements to compare
-	until results.length == a.length + b.length
+	until results.length == (a + b).length
 		if !a[l].nil? && !b[r].nil?
 			# push the smaller element onto the result array
 			if a[l] <= b[r]

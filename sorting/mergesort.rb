@@ -17,6 +17,7 @@ end
 
 
 def split_array(a)
+<<<<<<< HEAD
 	if a.length % 2 == 0
 		mid_index = a.length / 2 - 1
 	else
@@ -53,6 +54,21 @@ def combine(one, two)
   end
 
   return results
+=======
+	# find the middle index
+	# split the array in half - take a look at take and drop in the ruby docs, or use ranges 
+	# return left and right halves of array as separate arrays - did you know a method can return multiple arrays? look it up
+end
+
+# precondition: a and b are sorted
+def combine(a, b)
+	# create a results array
+	# counters pointing to the index of the smallest elements in each array
+	# check that we have elements to compare
+		# push the smaller element onto the result array
+	# if there are elements left over in a, move them to result
+	# if there are elements left over in b, move them to result
+>>>>>>> upstream/master
 end
 
 

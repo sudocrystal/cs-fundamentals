@@ -5,13 +5,19 @@ def count_node(list)
   temp = list.head
   while !temp.nil?
     count += 1
-    temp = list.next
+    temp = temp.next
   end
   return count
 end
 
 def find_min(list)
-  return "find_min not yet implemented"
+  temp = list.head
+  min = temp.data
+  until temp.nil?
+    min = temp.data if temp.data < min
+    temp = temp.next
+  end
+  return min
 end
 
 def reverse(list)

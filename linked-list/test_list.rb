@@ -16,3 +16,13 @@ x.add_at_index(5, "f")
 puts x.to_s
 x.add_at_index(7, "g")
 puts x.to_s
+x.delete_at_index(3)
+puts x.to_s
+x.delete_at_index(6)
+puts x.to_s
+x.delete_at_index(17)
+puts x.to_s
+x.delete_at_index(0)
+puts x.to_s
+x.delete_at_index(1)
+puts x.to_s

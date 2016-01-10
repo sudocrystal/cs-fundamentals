@@ -46,6 +46,21 @@ class List
 
   def delete_at_index(index)
     # TODO: remove data from a specific index
+    if index == 0
+      @head = @head.next
+    else
+      temp = @head
+      current_index = 0
+      while current_index + 1 < index
+        temp = temp.next
+        current_index += 1
+        if temp.next.nil?
+          puts "The list isn't long enough to delete at index #{index}."
+          return nil
+        end
+      end
+      temp.next = temp.next.next
+    end
   end
 
   def contains?(data)

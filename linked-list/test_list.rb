@@ -28,3 +28,7 @@ x.delete_at_index(0)
 puts x.to_s
 x.delete_at_index(1)
 puts x.to_s
+puts x.contains?("a")
+puts x.contains?("sfdf")
+puts x.contains?("f")
+puts x.contains?("hello")

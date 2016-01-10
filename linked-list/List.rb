@@ -66,7 +66,15 @@ class List
   end
 
   def contains?(data)
-    # TODO returns if the list contains data
+    temp = @head
+    while true
+      if temp.data == data
+        return true
+      elsif temp.next.nil?
+        return false
+      end
+      temp = temp.next
+    end
   end
 
   def to_s

@@ -75,12 +75,13 @@ class List
     else
     #iterate through the nodes
       while count != index-1
-        if node == nil
+        node = node.next
+        count += 1
+        #check to see if you're at the end of the list
+        if node.next == nil
           puts "list is not long enough for that"
           return false
         end
-        node = node.next
-        count += 1
       end
       #erase the node being deleted from the link system
       node.next = node.next.next

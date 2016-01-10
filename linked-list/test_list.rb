@@ -24,3 +24,5 @@ x.delete_at_index(0)
 puts x.to_s
 x.delete_at_index(2)
 puts x.to_s
+x.delete_at_index(2)
+puts x.to_s

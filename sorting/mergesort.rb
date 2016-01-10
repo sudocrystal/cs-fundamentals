@@ -37,6 +37,7 @@ def combine(a, b)
 	index_b = 0
 	results_index = 0
 
+	# counters pointing to the index of the smallest elements in each array
 	# check that we have elements to compare
 	while results_index < results.length
 		# if there are elements left over in b, move them to result
@@ -58,6 +59,8 @@ def combine(a, b)
 		results_index += 1
 	end
 	return results
+	# if there are elements left over in a, move them to result
+	# if there are elements left over in b, move them to result
 end
 
 # TEST IT

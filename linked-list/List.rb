@@ -27,25 +27,27 @@ class List
   end
 
   def add_at_index(index, data)
-    # TODO: add data at a specific index
-    temp = @head
-    temp_next = @head.next
-    current_index = 0
-    while current_index + 1 < index
-      if temp.next.nil?
-        puts "The list isn't long enough to add at index #{index}."
-        return nil
-      else
-        temp = temp.next
-        temp_next = temp.next
-        current_index += 1
+    if index == 0
+      @head = Node.new(data, @head)
+    else
+      temp = @head
+      temp_next = @head.next
+      current_index = 0
+      while current_index + 1 < index
+        if temp.next.nil?
+          puts "The list isn't long enough to add at index #{index}."
+          return nil
+        else
+          temp = temp.next
+          temp_next = temp.next
+          current_index += 1
+        end
       end
+      temp.next = Node.new(data, temp_next)
     end
-    temp.next = Node.new(data, temp_next)
   end
 
   def delete_at_index(index)
-    # TODO: remove data from a specific index
     if index == 0
       @head = @head.next
     else

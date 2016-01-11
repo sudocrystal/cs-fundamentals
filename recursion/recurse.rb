@@ -1,9 +1,19 @@
 def fact(n)
+  # base case
+  return 1 if n == 1 || n == 0
+  # recursive case
+  return n * fact(n - 1)
 end
 
 def fib(n)
+  # base case
+  return 1 if n == 1 or n == 2
+  # recursive case
+  return fib(n-1) + fib(n-2)
 end
 
+# use length of word to create base case
+# recursive case - throw out two letters every time you recurse
 def pal(s)
 end
 

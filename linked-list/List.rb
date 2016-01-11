@@ -1,4 +1,5 @@
 require './Node.rb'
+require 'pry'
 
 class List
   def initialize
@@ -25,7 +26,6 @@ class List
 
     # if the list isn't empty, add after the last node
     # TODO: this case
-
       temp = @head
   	  while temp.next != nil
         temp = temp.next
@@ -36,10 +36,38 @@ class List
 
   def add_at_index(index, data)
     # TODO Challenge: add data at a specific index
+    temp = @head
+
+    if index == 0
+      @head = Node.new(data,@head)
+    else
+      index_keep = 1
+      while (index) != index_keep
+      index_keep += 1
+      temp = temp.next
+      end
+      if (index) == index_keep
+        new_data = Node.new(data,temp.next)
+        temp.next = new_data
+      end
+    end
   end
 
   def delete_at_index(index)
     # TODO Challenge: remove data from a specific index
+    temp = @head
+    if index == 0
+      @head = temp.next
+    else
+      index_keep = 1
+      while index != index_keep
+        index_keep += 1
+        temp = temp.next
+      end
+      if index == index_keep
+        temp.next = temp.next.next
+      end
+    end
   end
 
   def contains?(data)

@@ -45,8 +45,6 @@ class List
     end
   end
 
-  end
-
   def delete_at_index(index)
     temp = @head
     if index == 0
@@ -66,13 +64,16 @@ class List
 
   def contains?(data)
     temp = @head 
-    while temp!= nil 
-      if temp.data == data
-        return true 
+    while temp != nil 
+      x = nil
+      x = temp.data == data
+      if x == true
+        break 
       end
       temp = temp.next 
-      return false 
+      # binding.pry
     end
+    return x
   end
 
   def to_s

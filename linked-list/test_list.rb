@@ -10,9 +10,10 @@ def test
   x.add("b")
   x.add("c")
   x.add_at_index(0, "z") #add at index gives us zabc
+  puts x.to_s
   data = "d"
   puts "Does this list contain #{data}? " + x.contains?(data).to_s
-  x.delete_at_index(1) #gives us zbc #contains is required
+  x.delete_at_index(0)
   puts x.to_s
   puts "Is the list empty? " + x.empty?.to_s
 end

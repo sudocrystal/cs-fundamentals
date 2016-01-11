@@ -63,7 +63,29 @@ class List
   end
 
   def delete_at_index(index)
-    # TODO Challenge: remove data from a specific index
+    if @head == nil
+      return "Nothing to delete"
+    else
+      temp = @head
+      if index >= 1
+        (index - 1).times do
+          if temp.next.nil?
+            temp = temp.next
+          else
+            puts "Nothing to delete"
+            return
+          end
+        end
+        to_delete = temp.next
+        skip_to = to_delete.next
+        #changing temp's next so as to skip over the deleted node
+        temp.next = skip_to
+        #to delete at index 0, change where head is
+      elsif index == 0
+        new_head = temp.next
+        @head = new_head
+      end
+    end
   end
 
   def contains?(data)

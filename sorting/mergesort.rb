@@ -6,26 +6,19 @@ def mergesort(a)
 end
 
 def split_array(a)
-	# find the middle
-  	# take = Returns first n elements from the array.
-	# drop = Drops first n elements and returns the rest of the elements.
-	# return left and right halves of array as separate arrays
-	# [a[0..mid] , a[mid+1..-1]]
-	# return a.take(mid), a.drop(mid)
+	# find the middle index
+	# split the array in half - take a look at take and drop in the ruby docs, or use ranges 
+	# return left and right halves of array as separate arrays - did you know a method can return multiple arrays? look it up
 end
 
 # precondition: a and b are sorted
 def combine(a, b)
 	# create a results array
-	
 	# counters pointing to the index of the smallest elements in each array
-
 	# check that we have elements to compare
 		# push the smaller element onto the result array
-
 	# if there are elements left over in a, move them to result
 	# if there are elements left over in b, move them to result
-
 end
 
 # TEST IT

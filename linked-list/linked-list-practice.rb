@@ -24,7 +24,7 @@ end
 
 def reverse(list)
   head = list.head
-  
+  #didn't finish this one
 end
 
 # create a new linked list

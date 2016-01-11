@@ -13,21 +13,61 @@ class List
     # if the list is empty, add the first node
 	  if @head == nil
 	    @head = Node.new(data,nil)
+    else
+      temp = @head
+      while !temp.next.nil?
+        temp = temp.next
+      end
+      temp.next = Node.new(data,nil)
 	  end
-    # if the list isn't empty, add after the last node
-    # TODO: this case
+
+    # this was a practice thing
+    # b, a
+    # make b node
+    # make b point at head
+    # reassign head
+    # b = Node.new(data,@head)
+    # @head = b
   end
 
   def add_at_index(index, data)
-    # TODO Challenge: add data at a specific index
+    # Challenge: add data at a specific index
+    temp = @head
+    if index == 0
+      @head = Node.new(data, temp)
+    else
+      (index - 1).times do
+        temp = temp.next
+      end
+      temp.next = Node.new(data, temp.next)
+    end
   end
 
   def delete_at_index(index)
-    # TODO Challenge: remove data from a specific index
+    # Challenge: remove data from a specific index
+    temp = @head
+    if index == 0
+      @head = temp.next
+    else
+      (index - 1).times do
+        temp = temp.next
+      end
+      temp.next = temp.next.next
+    end
   end
 
+  # do this one
   def contains?(data)
-    # TODO Challenge: returns if the list contains data
+    # returns true if the list contains that data anywhere
+    # this isn't working...
+    temp = @head
+    until temp.next.nil?
+      if temp.data == data
+        return true
+      end
+      temp = temp.next
+    end
+    return false
   end
 
   def to_s

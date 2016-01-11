@@ -1,3 +1,4 @@
+# this class becomes the underlying structure
 class Node
   attr_accessor :data
   attr_accessor :next

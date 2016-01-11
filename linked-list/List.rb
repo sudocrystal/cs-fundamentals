@@ -9,25 +9,43 @@ class List
 	  @head.nil?
   end
 
+  def to_s
+    # if the list is empty, say so
+    return "List is empty" if empty?
+    # Otherwise, traverse through list to print contents
+    s = "List contents: "
+    temp = @head       # creates a temp pointer so we don't lose head of list
+    while temp != nil  # while the current node isn't nil
+      s += temp.to_s   # add the current node's data to print
+      temp = temp.next # move to the next node
+    end
+    return s
+  end
+
   def add(data)
     # if the list is empty, add the first node
-	  if @head == nil
-	    @head = Node.new(data,nil)
+    if @head == nil
+      @head = Node.new(data,nil)
     else
       temp = @head
       while !temp.next.nil?
         temp = temp.next
       end
       temp.next = Node.new(data,nil)
-	  end
+    end
+  end
 
-    # this was a practice thing
-    # b, a
-    # make b node
-    # make b point at head
-    # reassign head
-    # b = Node.new(data,@head)
-    # @head = b
+  def contains?(data)
+    # returns true if the list contains that data anywhere
+    # this isn't working...
+    temp = @head
+    while !temp.next.nil?
+      if temp.data == data
+        return true
+      end
+      temp = temp.next
+    end
+    return false
   end
 
   def add_at_index(index, data)
@@ -54,32 +72,5 @@ class List
       end
       temp.next = temp.next.next
     end
-  end
-
-  # do this one
-  def contains?(data)
-    # returns true if the list contains that data anywhere
-    # this isn't working...
-    temp = @head
-    until temp.next.nil?
-      if temp.data == data
-        return true
-      end
-      temp = temp.next
-    end
-    return false
-  end
-
-  def to_s
-    # if the list is empty, say so
-    return "List is empty" if empty?
-    # Otherwise, traverse through list to print contents
-	  s = "List contents: "
-	  temp = @head       # creates a temp pointer so we don't lose head of list
-	  while temp != nil  # while the current node isn't nil
-	    s += temp.to_s   # add the current node's data to print
-      temp = temp.next # move to the next node
-	  end
-	  return s
   end
 end

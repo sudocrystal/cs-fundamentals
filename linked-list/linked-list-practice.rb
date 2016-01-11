@@ -21,7 +21,8 @@ def find_min(list)
 end
 
 def reverse(list)
-  return list if list.empty? || list.head.next.nil?
+  size = count_node(list)
+  return list if size == 0 || size == 1
   temp = list.head
   next_node = temp.next
   next_node

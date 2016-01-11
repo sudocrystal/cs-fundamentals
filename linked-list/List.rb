@@ -65,7 +65,6 @@ class List
   def contains?(data)
     temp = @head 
     while temp != nil 
-      x = nil
       x = temp.data == data
       if x == true
         break 

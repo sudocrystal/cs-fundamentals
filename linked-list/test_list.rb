@@ -10,4 +10,5 @@ x.add("c")
 puts x.to_s
 puts "Is the list empty? " + x.empty?.to_s
 
-puts x.contains?("a")
+puts "Should be true: #{x.contains?("a")}"
+puts "Should be false: #{x.contains?("jfkdlsajfdks")}"

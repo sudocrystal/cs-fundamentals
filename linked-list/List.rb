@@ -1,4 +1,6 @@
 require './Node.rb'
+require 'pry'
+
 
 class List
   def initialize
@@ -13,13 +15,51 @@ class List
     # if the list is empty, add the first node
 	  if @head == nil
 	    @head = Node.new(data,nil)
-	  end
+	  else
+    # this example only (add to front)
+    # b,a
+    # new_node = Node.new(data, @head)
+    # new_node.next = @head
+    # @head = new_node
+    # @head = Node.new(data,@head)
+    #OTHER WAY
     # if the list isn't empty, add after the last node
-    # TODO: this case
+      temp = @head
+      while !temp.next.nil?
+        temp = temp.next
+      end
+      temp.next = Node.new(data,nil)
+    end
   end
 
   def add_at_index(index, data)
-    # TODO Challenge: add data at a specific index
+    #if the list is empty, make a node and add it to the head
+    #remember to test for negative index, higher index, starting with empty list, last, first
+    #really we're adding before the index, sort of
+    if @head == nil
+	    @head = Node.new(data,nil)
+	  else
+      #go to the node before the one of the index you've entered
+      #if you enter an index that is past the end of the list, the node gets added to the end, and if it's negative we don't add it
+      temp = @head
+      if index >= 1
+        (index - 1).times do
+          unless temp.next.nil?
+            temp = temp.next
+          end
+        end
+        #hold on to the node after this node
+        after = temp.next
+        #point this before-node to a new node
+        temp.next = Node.new(data, nil)
+        #move to the new node
+        temp = temp.next
+        temp.next = after
+      #to add at index 0, just have to add to the front
+      elsif index == 0
+        @head = Node.new(data,@head)
+      end
+    end
   end
 
   def delete_at_index(index)
@@ -27,7 +67,20 @@ class List
   end
 
   def contains?(data)
-    # TODO Challenge: returns if the list contains data
+    has_data = false
+    stopping_point = false
+    temp = @head
+    while stopping_point == false
+      if temp.data == data
+        has_data = true
+        stopping_point = true
+      elsif
+        temp.next.nil?
+        stopping_point = true
+      end
+      temp = temp.next
+    end
+    return has_data
   end
 
   def to_s

@@ -1,6 +1,9 @@
 require './Node.rb'
 
 class List
+  attr_accessor :head
+  attr_accessor :tail
+  
   def initialize
 	  @head = nil
     @tail = nil

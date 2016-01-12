@@ -23,7 +23,15 @@ end
 
 def reverse(list)
   # reversing a list. much harder (head becomes tail)
-  return "reverse not yet implemented"
+  length = count_node(list)
+  temp = list.head
+
+  if length == 0 || length == 1
+    return list
+  end
+
+  # recurse?
+
 end
 
 # create a new linked list
@@ -33,8 +41,6 @@ my_list = List.new
 my_list.add(2)
 my_list.add(0)
 my_list.add(6)
-my_list.add(-1)
-
 
 # test methods above
 puts "What's in my list?"

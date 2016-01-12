@@ -1,10 +1,35 @@
 def fact(n)
+  ##base case
+  if n == 1 || n == 0
+    return 1
+  end
+  #recursive case
+  return n * fact(n-1)
 end
 
+# returns the nth number in the fibonacci sequence
 def fib(n)
+  # base case
+  if n == 1 || n == 2
+    return 1
+  end
+  # recursive case
+  return fib(n - 1) + fib(n - 2)
 end
 
+# hints: when testing for base case, use length of word
+# recursive case: should be throwing out two letters each time
 def pal(s)
+  # base case
+  if s.length == 0 || s.length == 1
+    return true
+  end
+  #recursive case
+  if s[0] != s[- 1]
+    return false
+  else
+    pal(s[1..-2])
+  end
 end
 
 # Factorial Tests

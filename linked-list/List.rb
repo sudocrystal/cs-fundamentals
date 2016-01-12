@@ -1,8 +1,16 @@
 require './Node.rb'
 
 class List
+  attr_accessor :head
+  attr_reader :size
+
   def initialize
 	  @head = nil
+    @size = 0
+  end
+
+  def error(index)
+    raise ArgumentError, "Index out of range! 🍰" if index > @size || index < 0
   end
 
   def empty?
@@ -31,9 +39,12 @@ class List
       # @head = new_node
       # @head = Node.new(data,@head)
     end
+
+    @size += 1
   end
 
   def add_at_index(index, data)
+    error(index)
     # TODO Challenge: add data at a specific index
     temp = @head
     new_link = temp.next
@@ -51,9 +62,12 @@ class List
       temp.next = new_node
       new_node.next = new_link
     end
+
+    @size += 1
   end
 
   def delete_at_index(index)
+    error(index)
     # TODO Challenge: remove data from a specific index
     temp = @head
     new_link = temp.next
@@ -69,6 +83,8 @@ class List
       new_link = new_link.next
       temp.next = new_link
     end
+
+    @size -= 1
   end
 
   def contains?(data)

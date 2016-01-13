@@ -38,8 +38,18 @@ class List
   end
 
   def delete_at_index(index)
-    # TODO Challenge: remove data from a specific index
+    temp = @head
+    #check the first
+    @head = temp.next if temp == index
+    #check the middle
+    while temp.next != nil
+      if temp.next == index
+        temp.next = temp.next.next
+        break
+      end
+    end
   end
+
 
   def contains?(data)
     temp = @head

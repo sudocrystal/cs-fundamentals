@@ -2,8 +2,12 @@ require './Node.rb'
 require 'pry'
 
 class List
+  attr_reader :count
+  attr_accessor :head
+
   def initialize
 	  @head = nil
+    @count = 0
   end
 
   def empty?
@@ -24,6 +28,7 @@ class List
       end
       temp.next = Node.new(data, nil)
     end
+    @count += 1
   end
 
   # def add(data)
@@ -58,6 +63,7 @@ class List
       puts "Index is out of bounds!"
     elsif index == 0
       @head = Node.new(data,@head)
+      @count += 1
     else
       current_index = 0
       temp = @head
@@ -71,6 +77,7 @@ class List
       else
         new_node = Node.new(data, temp.next)
         temp.next = new_node
+        @count += 1
       end
     end
   end
@@ -92,6 +99,7 @@ class List
         # next node becomes the new head
         @head = temp.next
       end
+      @count -= 1
     # list is more than one node long and we are not deleting the head node
     else
       current_index = 0
@@ -105,6 +113,7 @@ class List
       else
         # make the temp node point to the node after the node being deleted
         temp.next = temp.next.next
+        @count -= 1
       end
     end
   end

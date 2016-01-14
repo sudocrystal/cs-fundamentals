@@ -14,8 +14,8 @@ end
 def find_min(list)
   return nil if list.empty? 
 
-  temp = list.head
-  min = list.head.data
+  temp = list.head # Node
+  min = list.head.data # Integer
 
   while !temp.nil? 
     if temp.data < min 

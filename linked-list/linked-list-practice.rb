@@ -15,7 +15,7 @@ def find_min(list)
   return nil if list.empty? 
 
   temp = list.head
-  min = 0
+  min = list.head.data
 
   while !temp.nil? 
     if temp.data < min 
@@ -54,11 +54,11 @@ my_list = List.new
 
 # put some stuff in the list
 my_list.add(2)
-my_list.add(0)
+# my_list.add(0)
 my_list.add(6)
 my_list.add(1)
 my_list.add(10)
-my_list.add(-1)
+# my_list.add(-1)
 
 # test methods above
 puts "What's in my list?"

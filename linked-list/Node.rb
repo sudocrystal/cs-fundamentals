@@ -1,3 +1,4 @@
+# this is underlying structure to linked lists. (List.rb)
 class Node
   attr_accessor :data
   attr_accessor :next

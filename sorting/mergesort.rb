@@ -7,7 +7,7 @@ end
 
 def split_array(a)
 	# find the middle index
-	# split the array in half - take a look at take and drop in the ruby docs, or use ranges 
+	# split the array in half - take a look at take and drop in the ruby docs, or use ranges
 	# return left and right halves of array as separate arrays - did you know a method can return multiple arrays? look it up
 end
 

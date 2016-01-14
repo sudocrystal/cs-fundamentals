@@ -1,6 +1,7 @@
 require './Node.rb'
 
 class List
+  attr_accessor :head
   def initialize
 	  @head = nil
   end
@@ -13,12 +14,22 @@ class List
     # if the list is empty, add the first node
 	  if @head == nil
 	    @head = Node.new(data,nil)
-	  end
+	  else
+      temp = @head
+      while temp.next != nil
+        temp = temp.next
+      end
+      temp.next = Node.new(data,nil)
+      #@head = Node.new(data, @head)
     # if the list isn't empty, add after the last node
-    # TODO: this case
+    end
   end
 
   def add_at_index(index, data)
+    #check if index exists
+    #do a temp.next index times'
+    #ADD new node at that index but do not replace any nodes
+    #after the method my list should be one node longer
     # TODO Challenge: add data at a specific index
   end
 
@@ -26,8 +37,13 @@ class List
     # TODO Challenge: remove data from a specific index
   end
 
-  def contains?(data)
-    # TODO Challenge: returns if the list contains data
+  def contains?(d)
+    temp = @head
+    while temp != nil
+      return true if temp.data == d
+      temp = temp.next
+    end
+    return false
   end
 
   def to_s

@@ -1,10 +1,39 @@
-def fact(n)
+def fact (n)
+	if n == 1 || n == 0
+		return 1
+	end
+	return n * fact(n-1)
 end
 
+#1123581347112
+#what is the nth fibanocci number?
+# base case 1 and 2
+# fib(1) = 1
+# fib(2) = 1
+# fib(3) = 2
+# fib(4) = 3 = fib(3) + fib(2)
+# fib(5) = fib(4) + fib(3)
+# fib (n) = fib(n-1) + fib(n-2)
 def fib(n)
+  if n == 1 || n == 2
+    return 1
+  end
+  return fib(n-1) + fib(n-2)
 end
 
+#palendrome problem
+#hint :when you are testing for base case, use length of work
+#hint: when you are doing your recursive case, you should be throwing out two letters each time you recurse
 def pal(s)
+	if s.length == 1 || s.length == 0
+		return true
+	end
+	return
+	#should this be an loop?
+	pal(s.first) == pal(s.last)
+	s.drop(first)
+	s.pop
+	#should there be a if s.length > 1 return false?
 end
 
 # Factorial Tests

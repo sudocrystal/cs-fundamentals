@@ -11,4 +11,4 @@ x.add("d")
 x.add("e")
 puts "Is the list empty? " + x.empty?.to_s
 puts x.to_s
-puts x.contains?("b")
+puts

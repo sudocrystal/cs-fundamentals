@@ -1,4 +1,5 @@
 require './List.rb'
+require 'pry'
 
 def count_node(list)
   count = 0
@@ -11,6 +12,7 @@ def count_node(list)
 end
 
 def find_min(list)
+  return nil if list.head.nil?
   temp = list.head
   min = temp.data
   until temp.nil?
@@ -21,12 +23,16 @@ def find_min(list)
 end
 
 def reverse(list)
-  size = count_node(list)
-  return list if size == 0 || size == 1
   temp = list.head
-  next_node = temp.next
-  next_node
-
+  after = temp.next
+  before = nil
+  until temp.nil?
+    temp.next = before
+    before = temp
+    temp = after
+    temp != nil ? after = temp.next : list.head = before
+  end
+  return list
 end
 
 # create a new linked list

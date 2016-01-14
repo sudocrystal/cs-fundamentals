@@ -1,7 +1,13 @@
 require './List.rb'
 
 def count_node(list)
-  return "count_node not yet implemented"
+ temp = list.head
+ i = 0
+ while !temp.nil?
+   temp = temp.next
+   i += 1
+ end
+ return i
 end
 
 def find_min(list)

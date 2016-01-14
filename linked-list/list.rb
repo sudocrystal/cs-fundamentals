@@ -31,7 +31,7 @@ class List
   end
 
   def add_at_index(index, data)
-    # TODO Challenge: add data at a specific index
+    # Challenge: add data at a specific index
     current = @head
     previous = nil
     index.times do

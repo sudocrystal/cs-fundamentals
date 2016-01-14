@@ -5,7 +5,21 @@ def count_node(list)
 end
 
 def find_min(list)
-  return "find_min not yet implemented"
+  #need to go through the entire list
+  #if i find a smaller data, make that the minimum data  i know
+  #if the list is empty then return nil
+ if list.head == nil
+   return nil
+ end
+ min = list.head.data
+ temp = list.head
+ while temp != nil
+   if temp.data < min
+     min = temp.data
+   end
+   temp = temp.next
+ end
+ return min
 end
 
 def reverse(list)

@@ -1,14 +1,23 @@
 require './List.rb'
 
 def count_node(list)
-  return "count_node not yet implemented"
+  count = 0 
+  temp = list.head 
+  unless temp.nil?
+    temp = temp.next
+    count += 1
+  end
+
+  return count
 end
 
 def find_min(list)
+
   return "find_min not yet implemented"
 end
 
 def reverse(list)
+
   return "reverse not yet implemented"
 end
 

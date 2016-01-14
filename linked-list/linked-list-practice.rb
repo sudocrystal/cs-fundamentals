@@ -23,6 +23,7 @@ def find_min(list)
 end
 
 def reverse(list)
+  return list if list.empty?
   temp = list.head
   after = temp.next
   before = nil

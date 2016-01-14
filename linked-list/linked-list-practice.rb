@@ -28,7 +28,25 @@ def find_min(list)
 end
 
 def reverse(list)
-  
+  if count_node(list) == 0 
+    return nil
+  elsif count_node(list) == 1
+    return list
+  end
+
+  current = list.head
+  previous = nil 
+
+  while current != nil 
+    next_node = current.next
+    current.next = previous 
+    previous = current 
+    current = next_node 
+  end
+
+  list.head = previous
+
+  return list
 end
 
 # create a new linked list

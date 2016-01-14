@@ -1,13 +1,10 @@
 require './List.rb'
 
 def count_node(list)
-  # count the number of nodes, can do it internally (as you add or delete update the number)
-  # alternatively, can traverse through entire list (less efficient)
   return list.count
 end
 
 def find_min(list)
-  # assume head node is the smallest, traverse through list and if you find anything smaller, keep track of that as the new smallest
   temp = list.head
   if temp.nil?
     return "N/A (List is empty)"
@@ -30,7 +27,7 @@ def reverse(list)
 
   while next_next_node != nil
     start_node.next = next_next_node
-    next_node.next = list.head #start_node
+    next_node.next = list.head
 
     list.head = next_node
     next_node = start_node.next

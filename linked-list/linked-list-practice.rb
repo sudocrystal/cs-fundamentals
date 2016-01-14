@@ -22,16 +22,28 @@ def find_min(list)
 end
 
 def reverse(list)
-  # reversing a list. much harder (head becomes tail)
   length = count_node(list)
   temp = list.head
+  reversed = List.new
 
   if length == 0 || length == 1
     return list
   end
 
-  # recurse?
+  while length > 0
+    # set temp equal to the last node
+    (length - 1).times do
+      temp = temp.next
+    end
+    # add the last node to the reversed list
+    reversed.add(temp.data)
+    # reset temp to the original list's head
+    temp = list.head
+    # descrease the length by one
+    length -= 1
+  end
 
+  return reversed
 end
 
 # create a new linked list
@@ -41,6 +53,7 @@ my_list = List.new
 my_list.add(2)
 my_list.add(0)
 my_list.add(6)
+my_list.add(10)
 
 # test methods above
 puts "What's in my list?"

@@ -1,10 +1,22 @@
 def fact(n)
+  return 1 if n == 1 || n == 0 # Base case
+  n * fact(n - 1) # Recursive case
 end
 
 def fib(n)
+  return 1 if n == 1 || n == 2 # Base case
+  fib(n - 1) + fib(n - 2) # Recursive case
 end
 
 def pal(s)
+  return true if s.length == 1 || s.length == 0 # Base Case
+  if s[0] == s[-1]
+    s[0] = ''
+    s[-1] = ''
+    pal(s) # Recursive case
+  else
+    false
+  end
 end
 
 # Factorial Tests
@@ -21,6 +33,8 @@ puts "passes all fibanocci tests"
 
 # Palindrome Tests
 raise "pal broke - pal('racecar')" unless pal("racecar") == true
+raise "pal broke - pal('helloworlh')" unless pal("helloworl") == false
+raise "pal broke - pal('abcddcba')" unless pal("abcddcba") == true
 raise "pal broke - pal('helloworld')" unless pal("helloworld") == false
 raise "pal broke - pal('')" unless pal("") == true
 puts "passes all palindrome tests"

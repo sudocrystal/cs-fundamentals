@@ -1,15 +1,47 @@
 require './List.rb'
+require 'pry'
 
 def count_node(list)
-  return "count_node not yet implemented"
+  if list.head.nil?
+    return 0
+  else
+    count = 1
+    temp = list.head
+  end
+  while temp.next != nil
+    temp = temp.next
+    count += 1
+  end
+  return count
 end
 
 def find_min(list)
-  return "find_min not yet implemented"
+  if list.head.nil?
+    return "empty list"
+  else
+    min = list.head
+    temp = list.head
+  end
+  while temp.next != nil
+    if temp.next.data <= min.data
+      min = temp.next
+    end
+    temp = temp.next
+  end
+  return min
 end
 
 def reverse(list)
-  return "reverse not yet implemented"
+  prev = nil
+  temp = list.head
+  while temp != nil
+    next_element = temp.next
+    temp.next = prev
+    prev = temp
+    temp = next_element
+    list.head = prev
+  end
+  return list
 end
 
 # create a new linked list

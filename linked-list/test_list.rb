@@ -1,6 +1,7 @@
 require './List.rb'
 require './Node.rb'
 require 'pry'
+require './linked-list-practice.rb'
 
 def test
   x = List.new
@@ -16,4 +17,5 @@ def test
   x.delete_at_index(0)
   puts x.to_s
   puts "Is the list empty? " + x.empty?.to_s
+  count_node(x)
 end

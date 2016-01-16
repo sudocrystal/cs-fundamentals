@@ -23,9 +23,11 @@ def find_min(list)
       min = temp if temp.data < min.data
       temp = temp.next
     end
-    return min
+    return min.data
   end
 end
+
+
 
 def reverse(list)
   # head will become the tail
@@ -40,6 +42,40 @@ def reverse(list)
   end
   list.head = previous  # reassign the head of the list to the final node (can't do current because current is nil)
   return list
+end
+
+def reverse2(list)
+  head = list.head
+  reverse = nil
+  if reverse.nil?
+    reverse = head
+    head = head.next
+    reverse.next = nil
+  end
+  while !head.nil?
+    temp = head
+    head = head.next
+    temp.next = reverse
+    reverse = temp
+  end
+  list.head = reverse
+  return list
+end
+
+def reverse_recursive(list)
+  list.head = reverse_nodes(nil, list.head)
+  return list
+end
+
+def reverse_nodes(previous, node)
+  if node.nil?
+    return previous
+  end
+  # here?
+  last = reverse_nodes(node, node.next)
+  node.next = previous
+  ## OR BOTH?!?!?!
+  return last
 end
 
 # create a new linked list
@@ -58,4 +94,7 @@ puts my_list
 
 puts "NODE COUNT = #{count_node(my_list)}"
 puts "SMALLEST ELEMENT = #{find_min(my_list)}"
-puts "REVERSED LIST = #{reverse(my_list)}"
+# puts "REVERSED LIST = #{reverse(my_list)}"
+# puts my_list
+# puts "REVERSED LIST = #{reverse2(my_list)}"
+puts "REVERSED LIST = #{reverse_recursive(my_list)}"

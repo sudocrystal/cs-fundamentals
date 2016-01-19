@@ -42,7 +42,13 @@ def reverse(list)
   return list
 end
 
-def recurserev(list)
+def recurserev(list, temp)
+  if temp.next.nil?
+    list.head = Node.new(temp.data, list.head)
+    return list
+  else
+    list.head = Node.new(temp.data, recurserev(list, temp.next))
+  end
 end
 
 
@@ -82,4 +88,4 @@ my_next_list.add(10)
 
 puts "What's in my next list?"
 puts my_next_list
-puts "RECURSIVELY REVERSED LIST = #{recurserev(my_next_list)}"
+puts "RECURSIVELY REVERSED LIST = #{recurserev(my_next_list, my_next_list.head)}"

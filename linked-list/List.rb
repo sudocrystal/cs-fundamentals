@@ -1,6 +1,7 @@
 require './Node.rb'
 require 'pry'
 
+
 class List
   attr_accessor :head
 
@@ -22,14 +23,14 @@ class List
     # new_node = Node.new(data, @head)
     # new_node.next = @head
     # @head = new_node
-    # @head = Node.new(data,@head)
+    @head = Node.new(data, @head)
     #OTHER WAY
     # if the list isn't empty, add after the last node
-      temp = @head
-      while !temp.next.nil?
-        temp = temp.next
-      end
-      temp.next = Node.new(data,nil)
+      # temp = @head
+      # while !temp.next.nil?
+      #   temp = temp.next
+      # end
+      # temp.next = Node.new(data,nil)
     end
   end
 

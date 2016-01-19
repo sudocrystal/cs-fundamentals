@@ -1,6 +1,7 @@
 require './List.rb'
 require './test_list.rb'
 require './Node.rb'
+require 'pry'
 
 def count_node(list)
   temp = list.head
@@ -42,22 +43,17 @@ def reverse(list)
 end
 
 def recurserev(list)
-  #method to get things set up and wrap the recursive method
-  head = list.head
-  back = head
-  head = head.next
-  back.next = nil
-  inner_rev(list, head, back)
-end
-#
-def inner_rev(list, head, back)
-  if head.next.nil?
-    list.head = back
-    return list
-  else
-    inner_rev(list, head.next, back)
+  temp = list.head
+  #go to end of the list
+  while !temp.next.nil?
+    temp = temp.next
   end
+  head = Node.new(temp.data, recurserev(list))
+  return list
 end
+
+
+
 
 # create a new linked list
 my_list = List.new
@@ -67,7 +63,7 @@ my_list.add(2)
 my_list.add(0)
 my_list.add(6)
 my_list.add(-1)
-my_list.add(0)
+my_list.add(3)
 my_list.add(10)
 
 
@@ -78,4 +74,18 @@ puts my_list
 puts "NODE COUNT = #{count_node(my_list)}"
 puts "SMALLEST ELEMENT = #{find_min(my_list)}"
 puts "REVERSED LIST = #{reverse(my_list)}"
-puts "RECURSIVELY REVERSED LIST = #{recurserev(my_list)}"
+
+# create a new linked list
+my_next_list = List.new
+
+# put some stuff in the list
+my_next_list.add(2)
+my_next_list.add(0)
+my_next_list.add(6)
+my_next_list.add(-1)
+my_next_list.add(3)
+my_next_list.add(10)
+
+puts "What's in my next list?"
+puts my_next_list
+puts "RECURSIVELY REVERSED LIST = #{recurserev(my_next_list)}"

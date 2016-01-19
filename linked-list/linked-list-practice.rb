@@ -4,8 +4,8 @@ require './Node.rb'
 
 def count_node(list)
   temp = list.head
-  i = 1
-  while !temp.next.nil?
+  i = 0
+  while !temp.nil?
     temp = temp.next
     i += 1
   end
@@ -25,7 +25,38 @@ def find_min(list)
 end
 
 def reverse(list)
-  return "reverse not yet implemented"
+  #first is a unique case. get variables in place.
+  head = list.head
+  reverse = head
+  head = head.next
+  reverse.next = nil
+  while !head.nil?
+    #iterate through making new heads for reverse list as you go
+    temp = head
+    head = head.next
+    temp.next = reverse
+    reverse = temp
+  end
+  list.head = reverse
+  return list
+end
+
+def recurserev(list)
+  #method to get things set up and wrap the recursive method
+  head = list.head
+  back = head
+  head = head.next
+  back.next = nil
+  inner_rev(list, head, back)
+end
+#
+def inner_rev(list, head, back)
+  if head.next.nil?
+    list.head = back
+    return list
+  else
+    inner_rev(list, head.next, back)
+  end
 end
 
 # create a new linked list
@@ -47,3 +78,4 @@ puts my_list
 puts "NODE COUNT = #{count_node(my_list)}"
 puts "SMALLEST ELEMENT = #{find_min(my_list)}"
 puts "REVERSED LIST = #{reverse(my_list)}"
+puts "RECURSIVELY REVERSED LIST = #{recurserev(my_list)}"

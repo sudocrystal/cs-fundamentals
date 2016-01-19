@@ -6,21 +6,14 @@ def count_node(list)
   count = 0
   #I need a temp to keep track of the head
   temp = list.head
-    #only do these steps if the next node has something in it:
-    if temp == nil
-      return nil
-    else
-      # While the next node exists
-      while temp.next != nil
-        # add one to the counter
-        count += 1
-        # and move on to the next node.
-        temp = temp.next
-      end
-    return count + 1
+    # While the next node exists
+    while temp != nil
+      # add one to the counter
+      count += 1
+      # and move on to the next node.
+      temp = temp.next
     end
-
-  return "count_node not yet implemented"
+  return count
 end
 
 def find_min(list)
@@ -55,6 +48,21 @@ end
 # do it on paper first
 # optional
 def reverse(list)
+  head = list.head
+  reverse = nil
+  if reverse.nil?
+    reverse = head
+    head = head.next
+    reverse.next = nil
+  end
+  while !head.nil?
+    temp = head
+    head = head.next
+    temp.next = reverse
+    reverse = temp
+  end
+  list.head = reverse
+  return list
   return "reverse not yet implemented"
 end
 

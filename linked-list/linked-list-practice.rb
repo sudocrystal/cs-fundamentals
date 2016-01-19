@@ -43,14 +43,8 @@ def reverse(list)
 end
 
 def recurserev(list)
-  temp = list.head
-  #go to end of the list
-  while !temp.next.nil?
-    temp = temp.next
-  end
-  head = Node.new(temp.data, recurserev(list))
-  return list
 end
+
 
 
 

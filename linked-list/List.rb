@@ -1,7 +1,6 @@
 require './Node.rb'
 require 'pry'
 
-
 class List
   attr_accessor :head
 

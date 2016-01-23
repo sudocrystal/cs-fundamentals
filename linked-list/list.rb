@@ -55,9 +55,8 @@ class List
      while temp != nil
        return true if temp.data == data
        temp = temp.next
-       end
-       return false
      end
+     return false
   end
 
   def to_s

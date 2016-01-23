@@ -1,4 +1,5 @@
 require './List.rb'
+require 'pry'
 
 def count_node(list)
  temp = list.head
@@ -29,7 +30,22 @@ def find_min(list)
 end
 
 def reverse(list)
-  return "reverse not yet implemented"
+  current = list.head
+  next_node = current.next
+  previous = nil
+
+  while current != nil
+    # reverse the connection
+    current.next = previous
+
+    # move the pointers over
+    previous = current
+    current = next_node
+    next_node = current.next if !current.nil?
+  end
+  # reset head
+  list.head = previous
+  list
 end
 
 # create a new linked list

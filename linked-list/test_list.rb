@@ -18,4 +18,11 @@ def test
   puts x.to_s
   puts "Is the list empty? " + x.empty?.to_s
   count_node(x)
+  x.add("d")
+  x.add("e")
+  x.add("f")
+  x.add("g")
+  puts x.to_s
+  puts x.head.to_s_recursive
+  puts x.head.next.to_s_recursive
 end

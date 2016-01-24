@@ -23,6 +23,8 @@ def test
   x.add("f")
   x.add("g")
   puts x.to_s
-  puts x.head.to_s_recursive
-  puts x.head.next.to_s_recursive
+  puts "To string recursively: " + x.head.to_s_recursive
+  puts "Starting at second item, to string recursively: " + x.head.next.to_s_recursive
+  puts "Print reverse list recursively " + x.head.to_s_reverse_recurse
+  return "<3"
 end

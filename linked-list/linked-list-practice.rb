@@ -42,6 +42,7 @@ def reverse(list)
   return list
 end
 
+#THIS IS NOT CORRECT OR FINISHED
 def recurserev(list, temp)
   if temp.next.nil?
     list.head = Node.new(temp.data, list.head)

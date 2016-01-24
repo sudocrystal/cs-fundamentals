@@ -22,9 +22,9 @@ def find_min(list)
     min = list.head
     temp = list.head
   end
-  while temp.next != nil
-    if temp.next.data <= min.data
-      min = temp.next
+  while temp != nil
+    if temp.data <= min.data
+      min = temp
     end
     temp = temp.next
   end
@@ -32,15 +32,17 @@ def find_min(list)
 end
 
 def reverse(list)
-  prev = nil
-  temp = list.head
-  while temp != nil
-    next_element = temp.next
-    temp.next = prev
-    prev = temp
-    temp = next_element
-    list.head = prev
+  nextnode = list.head.next
+  list.head.next = nil
+  prev = list.head
+  while nextnode.next != nil
+    current = nextnode
+    nextnode = current.next
+    current.next = prev
+    prev = current
   end
+  nextnode.next = prev
+  list.head = nextnode
   return list
 end
 
@@ -51,6 +53,8 @@ my_list = List.new
 my_list.add(2)
 my_list.add(0)
 my_list.add(6)
+my_list.add(7)
+my_list.add(4)
 
 # test methods above
 puts "What's in my list?"

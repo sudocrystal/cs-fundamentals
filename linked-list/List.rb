@@ -1,4 +1,5 @@
 require './Node.rb'
+require 'pry'
 
 class List
   attr_accessor :head
@@ -9,7 +10,27 @@ class List
   def empty?
 	  @head.nil?
   end
+  #######
 
+  def reverse(node)
+    if node.next.nil?
+      self.head = node
+      return node
+    end
+      self.reverse(node.next)
+      temp = node.next
+      temp.next = node
+      node.next = nil
+    return self
+  end
+
+  def recursive_reverse
+    return nil if self.nil?
+    return self if self.head.next.nil?
+    self.reverse(self.head)
+    return self
+  end
+#####
 
   def add(data)
     # if the list is empty, add the first node

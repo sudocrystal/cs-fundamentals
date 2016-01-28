@@ -1,6 +1,8 @@
 require './Node.rb'
 
 class List
+  attr_accessor :head
+
   def initialize
 	  @head = nil
   end
@@ -18,16 +20,16 @@ class List
     # TODO: this case
   end
 
+  def contains?(data)
+    # TODO returns if the list contains data
+  end
+
   def add_at_index(index, data)
     # TODO Challenge: add data at a specific index
   end
 
   def delete_at_index(index)
     # TODO Challenge: remove data from a specific index
-  end
-
-  def contains?(data)
-    # TODO Challenge: returns if the list contains data
   end
 
   def to_s

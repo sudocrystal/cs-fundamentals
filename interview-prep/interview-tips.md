@@ -15,7 +15,6 @@ Technical interviews can be stressful, but like most anything else, they are a l
 		1. example of an interpersonal conflict you overcame
 		1. example of leadership or ownership
 		1. story about what you should have done differently in a past project
-		1. piece of trivia about your favorite language, and something you do and don't like about said language
 + [Big O Notation: Using not-boring math to measure code's efficiency](https://www.interviewcake.com/article/big-o-notation-time-and-space-complexity)
 
 If you approach problems systematically, and communicate clearly, you'll be most of the way there.

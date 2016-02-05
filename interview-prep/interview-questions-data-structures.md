@@ -2,11 +2,6 @@
 
 How is this data going to be accessed? Do we need to optimize for latency or space?
 
-+ Website User Preferences
-  - Design a system to store customer preferences (like default language, favorite color, shoe size) where every attribute will have a default value if not set by the user
-  - Write getAttribute(name)
-  - Write getAllAtrributes()
-  - What if we want to change the default value of attributes that are not set by customers?
 + Parking Lot for monthly parking
   - Design a system where customers are assigned a specific spot
   - Write isFullyBooked()
@@ -27,3 +22,9 @@ How is this data going to be accessed? Do we need to optimize for latency or spa
   - Design a system for admitting people into a nightclub
   - Consider VIPs and parties larger than 1
   - Only 500 people may be inside at a time (per fire code, of course)
++ Website User Preferences
+  - Design a system to store customer preferences (like default language, favorite color, shoe size) where every attribute will have a default value if not set by the user
+  - Write getAttribute(name)
+  - Write getAllAtrributes()
+  - What if we want to change the default value of attributes that are not set by customers?
+

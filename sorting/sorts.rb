@@ -1,3 +1,4 @@
+require 'pry'
 # create a randomly sized array (1-10 elements) with random values (0-999)
 def create_array
   array = []
@@ -9,13 +10,43 @@ def create_array
 end
 
 # TODO: write insertion sort
+# insertion sort goes through each element and compares it to
+# all previous elements until it gets to its spot in the list
 def insertion_sort(arr)
-  return arr
+
+	(1..arr.length - 1).each do |index|
+		# starting at index 1, which is the second element in the array, delete_at removes the value from the array
+		# and sets it to the variable value
+		value = arr.delete_at(index)
+		# sets the insertion index to the original index started at
+		insertion_index = index
+		# removes one from the index as long as the value ahead is greater than the value and not 0
+		insertion_index -= 1 while insertion_index > 0 && value < arr[insertion_index - 1]
+		# inserts the value back at the proper index
+		arr.insert(insertion_index, value)
+	end
+	return arr
 end
 
 # TODO: write selection sort
+#selection sort starts at the beginning and goes through the whole list to find the smallest element
+#and them moves it to the proper spot, then goes through the remaining elements again and moves that to the next spot
 def selection_sort(arr)
-  return arr
+
+	(0..arr.length-1).each do | position |
+		smallest = arr[position]
+		smallest_index = position
+		((position+1)..(arr.length-1)).each do | index |
+				if smallest > arr[index]
+					smallest = arr[index]
+					smallest_index = index
+				end
+			end
+		arr.delete_at(smallest_index)
+		arr.insert(position, smallest)
+	end
+
+	return arr
 end
 
 begin
@@ -32,12 +63,12 @@ puts "after RUBY SORT, array = "
 print sorted_numbers
 puts "\n\n"
 
+
 puts "after INSERTION SORT, array = "
 insertion_numbers = insertion_sort(numbers.dup)
 print insertion_numbers
 puts "\n\n"
 raise "Insertion Sort doesn't sort!" unless insertion_numbers == sorted_numbers
-
 puts "after SELECTION SORT, array = "
 selection_numbers = selection_sort(numbers.dup)
 print selection_numbers

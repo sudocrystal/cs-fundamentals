@@ -1,6 +1,8 @@
 # CS Fundamentals Series
 For Ada Developers Academy, by Crystal
 
+Curriculum now moved to: [Ada-Developers-Academy/textbook-curriculum](https://github.com/Ada-Developers-Academy/textbook-curriculum/tree/master/04-cs-fundamentals)
+
 ## Lessons on
 1. [Things Every Computer Scientist Needs to Know (including Binary, Arduino)](https://docs.google.com/presentation/d/1pWMaZXnRAf8dxT0AcsogOjHZeKXbSmDjdR2CZtClsN0/edit#slide=id.p3) - 2 hours
 1. [ADTs, Stacks and Queues](https://docs.google.com/presentation/d/1rsxjS8l4Lo21nskccyBH7Hap19NfL-D1BNGgiPlW0bc/edit) - 1.5 hours

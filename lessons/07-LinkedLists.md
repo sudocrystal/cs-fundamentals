@@ -1,4 +1,4 @@
-# List Implementations Continued
+# Linked Lists
 
 ## Assignment
 + [AdaGold/list-implementations-cont](https://github.com/AdaGold/list-implementations-cont)

@@ -1,4 +1,4 @@
-# Native Array vs Linked List
+# Native Array vs Array List
 
 ## Presentation
 + [Array vs LinkedList](https://drive.google.com/open?id=1-FASrGQ1o93yk2r6iqsra1marq-D8vXerHDYdPW0PO8)

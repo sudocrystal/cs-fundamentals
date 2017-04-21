@@ -9,8 +9,7 @@ This series was developed to teach CS fundamentals to new programmers in a conde
 | [ADTs, Stacks and Queues](lessons/02-ADTs-Stacks-Queues.md)   | [sudocrystal/stacks-queues](https://github.com/sudocrystal/stacks-queues)
 | [Sorting and Efficiency](lessons/03-Sorting-Efficiency.md)    | [sudocrystal/big-o](https://github.com/sudocrystal/big-o)
 | [Intro to Recursion](lessons/04-Intro-to-Recursion.md)        | [sudocrystal/recursion-tracing](https://github.com/sudocrystal/recursion-tracing)
-| [Writing Mergesort](lessons/05-Mergesort.md)                  |
-[sudocrystal/mergesort](https://github.com/sudocrystal/mergesort)
+| [Writing Mergesort](lessons/05-Mergesort.md)                  | [sudocrystal/mergesort](https://github.com/sudocrystal/mergesort)
 | [Native Array vs Array List](lessons/06-Array-vs-ArrayList.md)| [sudocrystal/list-implementations](https://github.com/sudocrystal/list-implementations)
 | [Linked List](lessons/07-LinkedLists.md)                      | [sudocrystal/list-implementations-cont](https://github.com/sudocrystal/list-implementations-cont)
 | [Trees](lessons/08-Trees.md)                                  | <!-- [sudocrystal/tree-practice](https://github.com/sudocrystal/tree-practice) -->

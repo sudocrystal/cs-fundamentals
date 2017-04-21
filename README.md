@@ -22,3 +22,14 @@ This series was developed to teach CS fundamentals to new programmers in a conde
 
 ## Powerpoint Presentations
 Link to powerpoint presentations: [here](https://drive.google.com/drive/u/0/folders/0B3xlasEt9caBfi1wcHhDWU8zdThOWnVtaFlEQm12c3NMUk5YRkoxdU1RS1FBSGlpZkVtWXM)
+
+## Smaller Practice Problems (ruby)
+| Problems                
+|:---------------------
+| [sudocrystal/balanced-brackets](https://github.com/sudocrystal/balanced-brackets)
+| [sudocrystal/digit-match](https://github.com/sudocrystal/digit-match)
+| [sudocrystal/even-digits](https://github.com/sudocrystal/even-digits)
+| [sudocrystal/number-sorting](https://github.com/sudocrystal/number-sorting)
+| [sudocrystal/array-equals](https://github.com/sudocrystal/array-equals)
+| [sudocrystal/whiteboard-practice-1](https://github.com/sudocrystal/whiteboard-practice-1)
+| [sudocrystal/whiteboard-practice-2](https://github.com/sudocrystal/whiteboard-practice-2)

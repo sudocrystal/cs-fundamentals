@@ -2,7 +2,7 @@
 This series was developed to teach CS fundamentals to new programmers in a condensed amount of time. The major goal of these lessons is to teach jargon and high-level concepts so that new programmers can recognize "mumbo jumbo" in the industry and have a mental model of concepts to properly communicate with their teammates.
 
 ## Table of Contents
-| Lesson                     | Assignment
+| Lesson                     | Ruby Assignment
 |:-------------------------- |:---------------------
 | [Imposter Syndrome](lessons/00-Imposter-Syndrome.md)          |
 | [Arrays and Hashes](lessons/01-Arrays-Hashes.md)              |

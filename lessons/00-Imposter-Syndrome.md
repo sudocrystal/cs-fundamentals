@@ -15,14 +15,6 @@ Watch:
 Think about this graphic:<br>
 ![What I Know Ven Diagram](images/What-I-Know.png)
 
-#### HW: SLACK CRYSTAL
-+ Reflections on Imposter Syndrome
-+ (optional) 1+ of your fears of Ada
-+ (optional) 1+ new coding-related learning you've made in the last month
-+ (optional) 1+ thing that makes you a great addition to the Ada Family! \<3 (programming aside)
-
-<hr>
-
 ## In Class Discussion
 
 ### Learning Goals
@@ -33,11 +25,6 @@ Think about this graphic:<br>
 + [Imposter Syndrome](https://docs.google.com/presentation/d/1b2_3v4gn14ArR3p4VEsbS71b8aU9PnEpL3pLCwRoJVI/edit?usp=sharing)
 
 ### Activities
-+ Share with small group at least one of the following:
-  + fears
-  + accomplishments
-  + things that make you awesome
-+ Share out 
 + Open discussion
 + Talk about exposing to others our "behind the scenes" and not letting them only see our "highlight reel"
 + It's ok if you don't have imposter syndrome!

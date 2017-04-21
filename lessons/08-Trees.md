@@ -3,9 +3,6 @@
 ## Presentation
 + [Trees](https://docs.google.com/presentation/d/1UMlgBfobtBKtwhirtFU76XKk9e_oSr9CaUAukN_lvC8/edit#slide=id.g659367895_0_57)
 
-## Assignment
-+ [AdaGold/tree-practice](https://github.com/AdaGold/tree-practice)
-
 ## Notes
 
 ### Tree Vocabulary
@@ -25,15 +22,15 @@
 -  Leaf
 	- A `leaf node` is a node with no descendants.  
 -  Edge
-	- An `edge` of a tree is a connection between nodes. 
+	- An `edge` of a tree is a connection between nodes.
 -  Path
 	- A `path` in a tree is a series of nodes that can be traversed from one node to another.  
 -  Level
 	- The `level` of a node is 1 + the number of nodes between the given node and the root.
--  Height 
+-  Height
 	-  The `height` of a node is the longest path between that node and one of it's leaf descendants.  
 -  Depth
-	- The `depth` of a node is the number of edges from the root to the node. 
+	- The `depth` of a node is the number of edges from the root to the node.
 -  Traversal
 	- `Traversing` through a tree is navigating through a tree executing some action on each node exactly once.  
 

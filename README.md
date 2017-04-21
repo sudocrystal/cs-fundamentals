@@ -6,13 +6,14 @@ This series was developed to teach CS fundamentals to new programmers in a conde
 |:-------------------------- |:---------------------
 | [Imposter Syndrome](lessons/00-Imposter-Syndrome.md)          |
 | [Arrays and Hashes](lessons/01-Arrays-Hashes.md)              |
-| [ADTs, Stacks and Queues](lessons/02-ADTs-Stacks-Queues.md)   |
-| [Sorting and Efficiency](lessons/03-Sorting-Efficiency.md)    |
-| [Intro to Recursion](lessons/04-Intro-to-Recursion.md)        |
-| Writing Mergesort                                             |
-| [Native Array vs Array List](lessons/06-Array-vs-ArrayList.md)|
-| [Linked List](lessons/07-LinkedLists.md)                      |
-| [Trees](lessons/08-Trees.md)                                  |
+| [ADTs, Stacks and Queues](lessons/02-ADTs-Stacks-Queues.md)   | [sudocrystal/stacks-queues](https://github.com/sudocrystal/stacks-queues)
+| [Sorting and Efficiency](lessons/03-Sorting-Efficiency.md)    | [sudocrystal/big-o](https://github.com/sudocrystal/big-o)
+| [Intro to Recursion](lessons/04-Intro-to-Recursion.md)        | [sudocrystal/recursion-tracing](https://github.com/sudocrystal/recursion-tracing)
+| [Writing Mergesort](lessons/05-Mergesort.md)                  |
+[sudocrystal/mergesort](https://github.com/sudocrystal/mergesort)
+| [Native Array vs Array List](lessons/06-Array-vs-ArrayList.md)| [sudocrystal/list-implementations](https://github.com/sudocrystal/list-implementations)
+| [Linked List](lessons/07-LinkedLists.md)                      | [sudocrystal/list-implementations-cont](https://github.com/sudocrystal/list-implementations-cont)
+| [Trees](lessons/08-Trees.md)                                  | <!-- [sudocrystal/tree-practice](https://github.com/sudocrystal/tree-practice) -->
 | Writing Tree methods                                          |
 | [Sets & Maps](lessons/09-Set-Map-Abstract-vs-Implement.md)    |
 | [Whiteboarding Tips](lessons/10-Whiteboarding-Tips.md)        |

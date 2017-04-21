@@ -1,8 +1,5 @@
 # Mergesort
 
-## Assignment
-+ [AdaGold/mergesort](https://github.com/AdaGold/mergesort)
-
 ## Notes
 Mergesort is a recursive sorting algorithm. Mergesort works by splitting a list of elements in half repeatedly until reaching a list size of 1 or 0. Each half of the list is recursively sorted, and then merged back together to form the final sorted list. Like most recursive sorts, the merge sort has an algorithmic complexity of O(n log n). For the curious, [here's an explanation of Mergesort complexity](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/analysis-of-merge-sort).
 

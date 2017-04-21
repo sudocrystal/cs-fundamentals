@@ -1,8 +1,5 @@
 # Linked Lists
 
-## Assignment
-+ [AdaGold/list-implementations-cont](https://github.com/AdaGold/list-implementations-cont)
-
 ## Notes
 
 ### Inside look at Linked List methods

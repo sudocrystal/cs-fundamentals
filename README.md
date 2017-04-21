@@ -3,7 +3,7 @@ This series was developed to teach CS fundamentals to new programmers in a conde
 
 ## Table of Contents
 | Lesson                     | Assignment
-|--------------------------- |----------------------
+|:-------------------------- |:---------------------
 | [Imposter Syndrome](lessons/00-Imposter-Syndrome.md)          |
 | [Arrays and Hashes](lessons/01-Arrays-Hashes.md)              |
 | [ADTs, Stacks and Queues](lessons/02-ADTs-Stacks-Queues.md)   |

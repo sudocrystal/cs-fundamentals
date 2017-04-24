@@ -11,7 +11,7 @@ This series was developed to teach CS fundamentals to new programmers in a conde
 | [Intro to Recursion](lessons/04-Intro-to-Recursion.md)        | [sudocrystal/recursion-tracing](https://github.com/sudocrystal/recursion-tracing)
 | [Writing Mergesort](lessons/05-Mergesort.md)                  | [sudocrystal/mergesort](https://github.com/sudocrystal/mergesort)
 | [Native Array vs Array List](lessons/06-Array-vs-ArrayList.md)| [sudocrystal/list-implementations](https://github.com/sudocrystal/list-implementations)
-| [Linked List](lessons/07-LinkedLists.md)                      | [sudocrystal/list-implementations-cont](https://github.com/sudocrystal/list-implementations-cont)
+| [Linked List](lessons/07-LinkedLists.md)                      | [sudocrystal/list-implementations](https://github.com/sudocrystal/list-implementations)
 | [Trees](lessons/08-Trees.md)                                  | <!-- [sudocrystal/tree-practice](https://github.com/sudocrystal/tree-practice) -->
 | Writing Tree methods                                          |
 | [Sets & Maps](lessons/09-Set-Map-Abstract-vs-Implement.md)    |

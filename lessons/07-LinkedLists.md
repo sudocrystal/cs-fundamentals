@@ -46,6 +46,4 @@ There are also **circularly linked lists**, which can either be singly or doubly
 
 ### Revisiting Interface vs Implementation
 
-### Sorting a Linked List
-
-### Reversing a Linked List
+### Maintaining order with a Linked List

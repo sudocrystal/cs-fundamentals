@@ -2,7 +2,10 @@
 This series was developed to teach CS fundamentals to new programmers in a condensed amount of time. The major goal of these lessons is to teach jargon and high-level concepts so that new programmers can recognize "mumbo jumbo" in the industry and have a mental model of concepts to properly communicate with their teammates.
 
 ## Table of Contents
-| Lesson                     | Ruby Assignment *
+
+_Most assignments below contain a `solutions` branch_
+
+| Lesson                     | Ruby Assignment
 |:-------------------------- |:---------------------
 | [Imposter Syndrome](lessons/00-Imposter-Syndrome.md)          |
 | [Arrays and Hashes](lessons/01-Arrays-Hashes.md)              |
@@ -19,8 +22,6 @@ This series was developed to teach CS fundamentals to new programmers in a conde
 | [Whiteboarding Recording](lessons/11-Whiteboarding-Recording.md) |
 | Whiteboarding Practice                                        |
 | [Things Every CS Should Know](lessons/12-Things-Every-CS-Should-Know.md) |
-
-* Note: most of the assignments contain a `solutions` branch
 
 ## Powerpoint Presentations
 Link to powerpoint presentations: [here](https://drive.google.com/drive/u/0/folders/0B3xlasEt9caBfi1wcHhDWU8zdThOWnVtaFlEQm12c3NMUk5YRkoxdU1RS1FBSGlpZkVtWXM)

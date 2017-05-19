@@ -15,12 +15,11 @@ _Most assignments below contain a `solutions` branch_
 | [Writing Mergesort](lessons/05-Mergesort.md)                  | [sudocrystal/mergesort](https://github.com/sudocrystal/mergesort)
 | [Native Array vs Array List](lessons/06-Array-vs-ArrayList.md)| [sudocrystal/list-implementations](https://github.com/sudocrystal/list-implementations)
 | [Linked List](lessons/07-LinkedLists.md)                      | [sudocrystal/list-implementations](https://github.com/sudocrystal/list-implementations)
-| [Trees](lessons/08-Trees.md)                                  | <!-- [sudocrystal/tree-practice](https://github.com/sudocrystal/tree-practice) -->
+| [Trees](lessons/08-Trees.md)                                  |  [sudocrystal/tree-practice](https://github.com/sudocrystal/tree-practice)
 | Writing Tree methods                                          |
 | [Sets & Maps](lessons/09-Set-Map-Abstract-vs-Implement.md)    |
 | [Whiteboarding Tips](lessons/10-Whiteboarding-Tips.md)        |
-| [Whiteboarding Recording](lessons/11-Whiteboarding-Recording.md) |
-| Whiteboarding Practice                                        |
+|  | [Whiteboarding Recording](lessons/11-Whiteboarding-Recording.md)
 | [Things Every CS Should Know](lessons/12-Things-Every-CS-Should-Know.md) |
 
 ## Powerpoint Presentations

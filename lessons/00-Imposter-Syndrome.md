@@ -1,12 +1,6 @@
 # Imposter Syndrome
 
-## Prepwork
-
-### Learning Goal
-+ To learn more about Imposter Syndrome
-+ Perspective on what you know and what you don't
-
-#### Resources
+## Pre-Work
 Watch:
 + [she++ The Documentary - Good Girl Gone Geek](https://www.youtube.com/watch?v=DqrfPCGo2aQ)
 + [Feel Like You're Faking It? That Might Not Be a Bad Thing](http://lifehacker.com/5928639/feel-like-youre-faking-it-that-might-not-be-a-bad-thing)
@@ -15,20 +9,14 @@ Watch:
 Think about this graphic:<br>
 ![What I Know Ven Diagram](images/What-I-Know.png)
 
-## In Class Discussion
+## Presentation
++ [Imposter Syndrome](https://docs.google.com/presentation/d/1xRZhUdaujm_gIkBB4E1uYsKFN3uMbIIrAxBYho0Z4d4/)
 
-### Learning Goals
-+ Recognizing we are all human (fears, strengths, accomplishments)
-+ Vulnerability in talking about Imposter Syndrome
-
-### Presentation
-+ [Imposter Syndrome](https://docs.google.com/presentation/d/1b2_3v4gn14ArR3p4VEsbS71b8aU9PnEpL3pLCwRoJVI/edit?usp=sharing)
-
-### Activities
+## Activities
 + Open discussion
 + Talk about exposing to others our "behind the scenes" and not letting them only see our "highlight reel"
 + It's ok if you don't have imposter syndrome!
 
-### Challenge
+## Challenge
 + Intentionally compliment one another during pair projects
 + Be willing to intentionally share struggles and broken code

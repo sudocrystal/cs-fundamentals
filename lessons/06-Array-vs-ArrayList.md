@@ -1,7 +1,7 @@
 # Native Array vs Array List
 
 ## Presentation
-+ [Array vs LinkedList](https://drive.google.com/open?id=1-FASrGQ1o93yk2r6iqsra1marq-D8vXerHDYdPW0PO8)
++ [Array vs LinkedList](https://docs.google.com/presentation/d/15_ss5WjvPxGoMb0-xjUAQJ0WraggY-bgxu1PappJrPk/)
 
 ## Notes
 In short, Ruby Arrays are magical and have characteristics that most programmers would not associate with an "array" (which has an implied "native" in front when used in conversation). Instead, Ruby's Arrays are similar to ArrayList in other languages (Java, C++, C#, etc) and have added functionality.

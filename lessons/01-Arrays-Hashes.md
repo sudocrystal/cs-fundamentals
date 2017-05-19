@@ -1,6 +1,6 @@
 # Reviewing Arrays and Hashes
 
-## Assignment
+## Activity
 1. Describe an array. Give an example of a problem that you might use an array to solve.
 2. Describe a Ruby hash. Give an example of a problem that you might use a Ruby hash to solve.
 3. For each of the following, determine if you would use an array, a hash, or a combination of the two to solve the problem. Use your descriptions in #1 and #2 to justify your answer.

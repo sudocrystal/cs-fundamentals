@@ -1,5 +1,8 @@
 # Linked Lists
 
+## Presentation
++ [Linked Lists](https://docs.google.com/presentation/d/19hF2PZMd8_LHyWtg4sXtMLJcscuZyySQ62lMY0N_mWQ/)
+
 ## Notes
 A Linked List is a dynamic data structure that allows you to create a storage space that is capable of growing or shrinking in size. Additionally, information stored in a Linked List is stored **non-contiguously** and **space is only used as it is needed**. This contrasts a native array, where information is stored contiguously in memory and the size is fixed when instantiated.
 

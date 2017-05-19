@@ -1,7 +1,7 @@
 # ADTs / Stacks / Queues
 
 ## Presentation
-+ [ADTs / Stacks / Queues](https://drive.google.com/open?id=1rsxjS8l4Lo21nskccyBH7Hap19NfL-D1BNGgiPlW0bc)
++ [ADTs / Stacks / Queues](https://docs.google.com/presentation/d/1LgR-wo4Niae31EY2yrT5fQHs_jeliW7JxB_1B7wXQBE/)
 
 ## Notes
 

@@ -1,4 +1,4 @@
 # Set, Map, Abstraction vs Implementation
 
 ## Presentation
-+ [Set, Map, Abstraction vs Implementation](https://drive.google.com/open?id=1lnIqUyvI49crrfIsOWLLUk0J6A_B6NkBappV1bUu64k)
++ [Set, Map, Abstraction vs Implementation](https://docs.google.com/presentation/d/1ZHhSi_J1MUOBqv-DELG8Jt5aSUjsPiiTGXEp9vgHNaM/)

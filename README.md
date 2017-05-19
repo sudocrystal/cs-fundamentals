@@ -24,4 +24,4 @@ _Most assignments below contain a `solutions` branch_
 | [Things Every CS Should Know](lessons/12-Things-Every-CS-Should-Know.md) |
 
 ## Powerpoint Presentations
-Link to powerpoint presentations: [here](https://drive.google.com/drive/u/0/folders/0B3xlasEt9caBfi1wcHhDWU8zdThOWnVtaFlEQm12c3NMUk5YRkoxdU1RS1FBSGlpZkVtWXM)
+Link to powerpoint presentations: [here](https://drive.google.com/drive/folders/0B6DpS0ihYV31Rk1BakZMQ09FWk0?usp=sharing)
